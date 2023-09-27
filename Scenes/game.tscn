@@ -38,8 +38,8 @@ offset_right = 576.0
 offset_bottom = 384.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 80
-text = "QuestionFall"
+theme_override_font_sizes/font_size = 75
+text = "KnowledgeFall"
 horizontal_alignment = 1
 vertical_alignment = 1
 
