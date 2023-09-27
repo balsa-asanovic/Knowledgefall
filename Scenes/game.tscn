@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=3 uid="uid://b4mvsct8fkqcq"]
+
+[ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
+[ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
+[ext_resource type="Script" path="res://Scripts/Start.gd" id="2_kweht"]
+[ext_resource type="FontFile" uid="uid://rih8xunm73p3" path="res://Fonts/gugi-60.tres" id="2_o3fuu"]
+[ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
+[ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_726vx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwk8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hndh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4x30g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmbm1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13e3a"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+custom_minimum_size = Vector2(576, 1024)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.898039, 0.74902, 0.607843, 1)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+custom_minimum_size = Vector2(576, 80)
+offset_top = 300.0
+offset_right = 576.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 80
+text = "QuestionFall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="Node2D" parent="UI"]
+position = Vector2(0, 400)
+script = ExtResource("2_gnlmu")
+
+[node name="Start" type="Node2D" parent="UI/MenuButtons"]
+script = ExtResource("2_kweht")
+
+[node name="StartMenu" type="VBoxContainer" parent="UI/MenuButtons/Start"]
+offset_right = 576.0
+offset_bottom = 215.0
+
+[node name="Start" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_726vx")
+text = "Start"
+flat = true
+
+[node name="Settings" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cwk8k")
+text = "Settings"
+flat = true
+
+[node name="Quit" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hndh8")
+text = "Quit"
+flat = true
+
+[node name="Difficulty" type="Node2D" parent="UI/MenuButtons"]
+position = Vector2(576, 0)
+script = ExtResource("5_pyqkn")
+
+[node name="DifficultyMenu" type="VBoxContainer" parent="UI/MenuButtons/Difficulty"]
+offset_right = 576.0
+offset_bottom = 215.0
+
+[node name="Easy" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4x30g")
+text = "Easy"
+flat = true
+
+[node name="Medium" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmbm1")
+text = "Medium"
+flat = true
+
+[node name="Hard" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_13e3a")
+text = "Hard"
+flat = true
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Emitters" type="Node2D" parent="."]
+
+[node name="Global" type="Node2D" parent="."]
+script = ExtResource("6_3qtck")
+
+[connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Start" to="UI/MenuButtons" method="_on_start_pressed"]
