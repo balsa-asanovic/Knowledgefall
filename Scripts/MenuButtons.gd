@@ -15,3 +15,8 @@ func _process(delta):
 func _on_start_pressed():
 	get_node("Start").move(Vector2(-576, 0))
 	get_node("Difficulty").move(Vector2(0, 0))
+
+
+func _on_back_pressed():
+	get_node("Start").move(Vector2(0, 0))
+	get_node("Difficulty").move(Vector2(576, 0))

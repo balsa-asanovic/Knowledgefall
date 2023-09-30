@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://1qgq3w5o2ix0"]
+
+[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_30470"]
+[ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="2_j4v0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi5lr"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_30470")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ProjectileArea" type="Area2D" parent="."]
+script = ExtResource("2_j4v0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileArea"]
+shape = SubResource("RectangleShape2D_pi5lr")
+
+[connection signal="area_entered" from="ProjectileArea" to="." method="_on_projectile_area_area_entered"]

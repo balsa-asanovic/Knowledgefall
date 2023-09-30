@@ -1,11 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=26 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
 [ext_resource type="Script" path="res://Scripts/Start.gd" id="2_kweht"]
 [ext_resource type="FontFile" uid="uid://rih8xunm73p3" path="res://Fonts/gugi-60.tres" id="2_o3fuu"]
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
+[ext_resource type="Texture2D" uid="uid://csvwg0keht6t1" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
+[ext_resource type="Script" path="res://Scripts/Barrier.gd" id="7_ieytr"]
+[ext_resource type="Texture2D" uid="uid://ckqc01cui7lco" path="res://Sprites/OrangeButton.png" id="8_g7co6"]
+[ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
+[ext_resource type="Texture2D" uid="uid://baqojn7birl82" path="res://Sprites/BlueButton.png" id="10_4cf2w"]
+[ext_resource type="Texture2D" uid="uid://cx40ons8rcaj6" path="res://Sprites/YellowButton.png" id="11_3puej"]
+[ext_resource type="Texture2D" uid="uid://deffpk3acc3u3" path="res://Sprites/GreenButton.png" id="11_gb8le"]
+[ext_resource type="Texture2D" uid="uid://b0afxekicttip" path="res://Sprites/RedButton.png" id="12_qos2n"]
+[ext_resource type="Texture2D" uid="uid://b3q0pa7x1b1mh" path="res://Sprites/DiffGreenButton.png" id="12_x4q4c"]
+[ext_resource type="Texture2D" uid="uid://b33c0adejg3il" path="res://Sprites/DiffBlueButton.png" id="13_ohyes"]
+[ext_resource type="Texture2D" uid="uid://ckd6bupdsp3x1" path="res://Sprites/DiffRedButton.png" id="14_h05cj"]
+[ext_resource type="Texture2D" uid="uid://dq2vpcc2rcidp" path="res://Sprites/PurpleButton.png" id="15_4lf36"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_726vx"]
 
@@ -18,6 +30,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmbm1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13e3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myh5y"]
+size = Vector2(572.5, 10.75)
 
 [node name="Game" type="Node2D"]
 
@@ -140,9 +155,121 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_13e3a")
 text = "Hard"
 flat = true
 
+[node name="Back" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+custom_minimum_size = Vector2(576, 67)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_o3fuu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_13e3a")
+text = "Back"
+flat = true
+
 [node name="Score" type="Node2D" parent="."]
 
 [node name="Buttons" type="Node2D" parent="."]
+position = Vector2(0, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons"]
+z_index = 3
+position = Vector2(288, 268)
+texture = ExtResource("6_0njkx")
+
+[node name="Barrier" type="Area2D" parent="Buttons/Sprite2D"]
+position = Vector2(-1, -214)
+script = ExtResource("7_ieytr")
+areaType = "Barrier"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Buttons/Sprite2D/Barrier"]
+position = Vector2(2, -14)
+shape = SubResource("RectangleShape2D_myh5y")
+
+[node name="Colors" type="Node2D" parent="Buttons"]
+z_index = 5
+
+[node name="Orange" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 12.0
+offset_top = 275.0
+offset_right = 188.0
+offset_bottom = 375.0
+texture_normal = ExtResource("8_g7co6")
+script = ExtResource("9_upre3")
+color = "Orange"
+
+[node name="Blue" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 202.0
+offset_top = 275.0
+offset_right = 378.0
+offset_bottom = 375.0
+texture_normal = ExtResource("10_4cf2w")
+script = ExtResource("9_upre3")
+color = "Purple"
+
+[node name="Yellow" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 390.0
+offset_top = 275.0
+offset_right = 566.0
+offset_bottom = 375.0
+texture_normal = ExtResource("11_3puej")
+script = ExtResource("9_upre3")
+color = "Yellow"
+
+[node name="DiffGreen" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 390.0
+offset_top = 380.0
+offset_right = 566.0
+offset_bottom = 480.0
+texture_normal = ExtResource("12_x4q4c")
+script = ExtResource("9_upre3")
+color = "DiffGreen"
+
+[node name="DiffBlue" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 202.0
+offset_top = 380.0
+offset_right = 378.0
+offset_bottom = 480.0
+texture_normal = ExtResource("13_ohyes")
+script = ExtResource("9_upre3")
+color = "DiffBlue"
+
+[node name="DiffRed" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 12.0
+offset_top = 380.0
+offset_right = 188.0
+offset_bottom = 480.0
+texture_normal = ExtResource("14_h05cj")
+script = ExtResource("9_upre3")
+color = "DiffRed"
+
+[node name="Purple" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 13.0
+offset_top = 170.0
+offset_right = 189.0
+offset_bottom = 270.0
+texture_normal = ExtResource("15_4lf36")
+script = ExtResource("9_upre3")
+color = "Blue"
+
+[node name="Green" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 202.0
+offset_top = 170.0
+offset_right = 378.0
+offset_bottom = 270.0
+texture_normal = ExtResource("11_gb8le")
+script = ExtResource("9_upre3")
+color = "Red"
+
+[node name="Red" type="TextureButton" parent="Buttons/Colors"]
+offset_left = 390.0
+offset_top = 170.0
+offset_right = 566.0
+offset_bottom = 270.0
+texture_normal = ExtResource("12_qos2n")
+script = ExtResource("9_upre3")
+color = "Blue"
 
 [node name="Emitters" type="Node2D" parent="."]
 
@@ -150,3 +277,13 @@ flat = true
 script = ExtResource("6_3qtck")
 
 [connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Start" to="UI/MenuButtons" method="_on_start_pressed"]
+[connection signal="pressed" from="UI/MenuButtons/Difficulty/DifficultyMenu/Back" to="UI/MenuButtons" method="_on_back_pressed"]
+[connection signal="pressed" from="Buttons/Colors/Orange" to="Buttons/Colors/Orange" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/Blue" to="Buttons/Colors/Blue" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/Yellow" to="Buttons/Colors/Yellow" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/DiffGreen" to="Buttons/Colors/DiffGreen" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/DiffBlue" to="Buttons/Colors/DiffBlue" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/DiffRed" to="Buttons/Colors/DiffRed" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/Purple" to="Buttons/Colors/Purple" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/Green" to="Buttons/Colors/Green" method="ChangeColor"]
+[connection signal="pressed" from="Buttons/Colors/Red" to="Buttons/Colors/Red" method="ChangeColor"]

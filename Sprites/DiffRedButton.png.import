@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csvwg0keht6t1"
-path="res://.godot/imported/Banner.png-8da3749149b3234ef8461317654f3fec.ctex"
+uid="uid://ckd6bupdsp3x1"
+path="res://.godot/imported/DiffRedButton.png-c7d96e4f484241a5871048ab36a92804.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Banner.png"
-dest_files=["res://.godot/imported/Banner.png-8da3749149b3234ef8461317654f3fec.ctex"]
+source_file="res://Sprites/DiffRedButton.png"
+dest_files=["res://.godot/imported/DiffRedButton.png-c7d96e4f484241a5871048ab36a92804.ctex"]
 
 [params]
 
