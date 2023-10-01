@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=29 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dq2vpcc2rcidp" path="res://Sprites/PurpleButton.png" id="15_4lf36"]
 [ext_resource type="Texture2D" uid="uid://b7sddroc38iha" path="res://Sprites/TopButton.png" id="18_a3oov"]
 [ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
+[ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_726vx"]
 
@@ -304,6 +305,7 @@ script = ExtResource("19_sehrc")
 
 [node name="Emitters" type="Node2D" parent="."]
 position = Vector2(576, 0)
+script = ExtResource("20_xdnvf")
 
 [node name="LeftEmitter" type="Node2D" parent="Emitters"]
 position = Vector2(100, -100)
@@ -313,6 +315,8 @@ position = Vector2(288, -100)
 
 [node name="RightEmitter" type="Node2D" parent="Emitters"]
 position = Vector2(476, -100)
+
+[node name="Timer" type="Timer" parent="Emitters"]
 
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("6_3qtck")

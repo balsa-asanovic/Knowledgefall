@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn8cniafxt0bn"]
+
+[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_3yn22"]
+[ext_resource type="Texture2D" uid="uid://cn3svxybk410n" path="res://Sprites/BlueProjectile.png" id="1_prr8w"]
+[ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="3_nmg4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qotdb"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_3yn22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_prr8w")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_nmg4y")
+areaType = "Blue"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qotdb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

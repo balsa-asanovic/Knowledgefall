@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var global = Global
+@onready var global = get_node("/root/Global")
 
 var y_speed = 0
 
@@ -12,10 +12,23 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.y += y_speed
-
+	
+	if position.y > 1024 || position.y < -1500 || global.game_over:
+		print(position)
+		print("Deleted")
+		queue_free()
 
 func _on_projectile_area_area_entered(area):
 	# we check the color of the area with which this area collided
 	if get_node("ProjectileArea").areaType == area.areaType:
 		# if colors match delete both areas
 		queue_free()
+
+
+func _on_area_2d_area_entered(area):
+	if get_node("Area2D").areaType == area.areaType:
+		global.change_score(.5)
+		queue_free()
+	if area.areaType == "Barrier" and y_speed > 0:
+		global.change_score(-10)
+

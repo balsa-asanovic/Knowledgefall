@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2y3ohm5qmp5a"]
+
+[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_vexxw"]
+[ext_resource type="Texture2D" uid="uid://hxmsi42emmsg" path="res://Sprites/DiffRedProjectile.png" id="2_01lsx"]
+[ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="3_81ef1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qotdb"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_vexxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_01lsx")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_81ef1")
+areaType = "DiffRed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qotdb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
