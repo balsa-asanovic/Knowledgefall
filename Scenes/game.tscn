@@ -196,13 +196,13 @@ text = "High Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="Score"]
+[node name="BackButton" type="TextureButton" parent="Score"]
 offset_left = 7.0
 offset_top = -140.0
 offset_right = 143.0
 offset_bottom = -90.0
 
-[node name="Back" type="Label" parent="Score/TextureButton"]
+[node name="Back" type="Label" parent="Score/BackButton"]
 layout_mode = 0
 offset_left = 21.0
 offset_right = 121.0
@@ -210,6 +210,25 @@ offset_bottom = 50.0
 theme_override_fonts/font = ExtResource("1_ko1tl")
 theme_override_font_sizes/font_size = 30
 text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndOptions" type="Node2D" parent="Score"]
+position = Vector2(576, -40)
+
+[node name="RestartButton" type="TextureButton" parent="Score/EndOptions"]
+offset_left = 88.0
+offset_top = 350.0
+offset_right = 488.0
+offset_bottom = 440.0
+
+[node name="Try Again" type="Label" parent="Score/EndOptions/RestartButton"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Try Again?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
