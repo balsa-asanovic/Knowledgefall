@@ -232,6 +232,22 @@ text = "Try Again?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Menu" type="TextureButton" parent="Score/EndOptions"]
+offset_left = 88.0
+offset_top = 440.0
+offset_right = 488.0
+offset_bottom = 530.0
+
+[node name="Harder" type="Label" parent="Score/EndOptions/Menu"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Buttons" type="Node2D" parent="."]
 position = Vector2(0, 1024)
 
