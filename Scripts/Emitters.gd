@@ -35,7 +35,7 @@ func begin_game():
 
 func _on_timer_timeout():
 	randomize()
-	var projectile = choices[int(randf_range(0, global.projectile_limit))].instance()
+	var projectile = choices[int(randf_range(0, global.projectile_limit))].instantiate()
 	add_child(projectile)
 	
 	randomize()

@@ -1,9 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=25 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="2_0pstm"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
-[ext_resource type="FontFile" uid="uid://rih8xunm73p3" path="res://Fonts/gugi-60.tres" id="2_o3fuu"]
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
 [ext_resource type="Texture2D" uid="uid://csvwg0keht6t1" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
@@ -24,12 +24,6 @@
 [ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
 [ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4x30g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmbm1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13e3a"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myh5y"]
 size = Vector2(572.5, 10.75)
 
@@ -45,6 +39,7 @@ offset_bottom = 40.0
 color = Color(0.898039, 0.74902, 0.607843, 1)
 
 [node name="UI" type="Node2D" parent="."]
+script = ExtResource("2_0pstm")
 
 [node name="Title" type="Label" parent="UI"]
 custom_minimum_size = Vector2(576, 80)
@@ -115,65 +110,81 @@ text = "Quit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Difficulty" type="Node2D" parent="UI/MenuButtons"]
+[node name="DifficultyButtons" type="Node2D" parent="UI"]
 position = Vector2(576, 0)
 script = ExtResource("5_pyqkn")
 
-[node name="DifficultyMenu" type="VBoxContainer" parent="UI/MenuButtons/Difficulty"]
-offset_right = 576.0
-offset_bottom = 215.0
+[node name="EasyButton" type="TextureButton" parent="UI/DifficultyButtons"]
+offset_left = 88.0
+offset_top = 350.0
+offset_right = 488.0
+offset_bottom = 440.0
+metadata/_edit_group_ = true
 
-[node name="Easy" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
-custom_minimum_size = Vector2(576, 67)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_fonts/font = ExtResource("2_o3fuu")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4x30g")
+[node name="Easy" type="Label" parent="UI/DifficultyButtons/EasyButton"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
 text = "Easy"
-flat = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Medium" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
-custom_minimum_size = Vector2(576, 67)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_fonts/font = ExtResource("2_o3fuu")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wmbm1")
+[node name="MediumButton" type="TextureButton" parent="UI/DifficultyButtons"]
+offset_left = 88.0
+offset_top = 440.0
+offset_right = 488.0
+offset_bottom = 530.0
+metadata/_edit_group_ = true
+
+[node name="Medium" type="Label" parent="UI/DifficultyButtons/MediumButton"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
 text = "Medium"
-flat = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Hard" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
-custom_minimum_size = Vector2(576, 67)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_fonts/font = ExtResource("2_o3fuu")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxEmpty_13e3a")
+[node name="HardButton" type="TextureButton" parent="UI/DifficultyButtons"]
+offset_left = 88.0
+offset_top = 540.0
+offset_right = 488.0
+offset_bottom = 630.0
+metadata/_edit_group_ = true
+
+[node name="Hard" type="Label" parent="UI/DifficultyButtons/HardButton"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
 text = "Hard"
-flat = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Back" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
-custom_minimum_size = Vector2(576, 67)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_pressed_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_hover_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_colors/font_focus_color = Color(0.380392, 0.47451, 0.254902, 1)
-theme_override_fonts/font = ExtResource("2_o3fuu")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxEmpty_13e3a")
-text = "Back"
-flat = true
+[node name="BackButton" type="TextureButton" parent="UI/DifficultyButtons"]
+offset_left = 88.0
+offset_top = 670.0
+offset_right = 488.0
+offset_bottom = 760.0
+metadata/_edit_group_ = true
+
+[node name="Back" type="Label" parent="UI/DifficultyButtons/BackButton"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Score" type="Node2D" parent="."]
 position = Vector2(0, -400)
@@ -282,44 +293,44 @@ z_index = 5
 
 [node name="Orange" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 12.0
-offset_top = 275.0
+offset_top = 268.0
 offset_right = 188.0
-offset_bottom = 375.0
+offset_bottom = 368.0
 texture_normal = ExtResource("8_g7co6")
 script = ExtResource("9_upre3")
 color = "Orange"
 
 [node name="Blue" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 202.0
-offset_top = 275.0
-offset_right = 378.0
-offset_bottom = 375.0
+offset_left = 12.0
+offset_top = 156.0
+offset_right = 188.0
+offset_bottom = 256.0
 texture_normal = ExtResource("10_4cf2w")
 script = ExtResource("9_upre3")
-color = "Purple"
+color = "Blue"
 
 [node name="Yellow" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 390.0
-offset_top = 275.0
-offset_right = 566.0
-offset_bottom = 375.0
+offset_left = 388.0
+offset_top = 268.0
+offset_right = 564.0
+offset_bottom = 368.0
 texture_normal = ExtResource("11_3puej")
 script = ExtResource("9_upre3")
 color = "Yellow"
 
 [node name="DiffGreen" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 390.0
+offset_left = 388.0
 offset_top = 380.0
-offset_right = 566.0
+offset_right = 564.0
 offset_bottom = 480.0
 texture_normal = ExtResource("12_x4q4c")
 script = ExtResource("9_upre3")
 color = "DiffGreen"
 
 [node name="DiffBlue" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 202.0
+offset_left = 200.0
 offset_top = 380.0
-offset_right = 378.0
+offset_right = 376.0
 offset_bottom = 480.0
 texture_normal = ExtResource("13_ohyes")
 script = ExtResource("9_upre3")
@@ -335,58 +346,58 @@ script = ExtResource("9_upre3")
 color = "DiffRed"
 
 [node name="Purple" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 13.0
-offset_top = 170.0
-offset_right = 189.0
-offset_bottom = 270.0
+offset_left = 200.0
+offset_top = 268.0
+offset_right = 376.0
+offset_bottom = 368.0
 texture_normal = ExtResource("15_4lf36")
 script = ExtResource("9_upre3")
-color = "Blue"
+color = "Purple"
 
 [node name="Green" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 202.0
-offset_top = 170.0
-offset_right = 378.0
-offset_bottom = 270.0
+offset_left = 200.0
+offset_top = 156.0
+offset_right = 376.0
+offset_bottom = 256.0
 texture_normal = ExtResource("11_gb8le")
 script = ExtResource("9_upre3")
-color = "Red"
+color = "Green"
 
 [node name="Red" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 390.0
-offset_top = 170.0
-offset_right = 566.0
-offset_bottom = 270.0
+offset_left = 388.0
+offset_top = 156.0
+offset_right = 564.0
+offset_bottom = 256.0
 texture_normal = ExtResource("12_qos2n")
 script = ExtResource("9_upre3")
-color = "Blue"
+color = "Red"
 
 [node name="Arrows" type="Node2D" parent="Buttons"]
 position = Vector2(0, -1024)
 
 [node name="LeftArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 30.0
+offset_left = 32.0
 offset_top = 1095.0
-offset_right = 166.0
+offset_right = 168.0
 offset_bottom = 1170.0
 texture_normal = ExtResource("18_a3oov")
 script = ExtResource("19_sehrc")
 
 [node name="MiddleArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 219.0
+offset_left = 220.0
 offset_top = 1095.0
-offset_right = 355.0
+offset_right = 356.0
 offset_bottom = 1170.0
 texture_normal = ExtResource("18_a3oov")
 script = ExtResource("19_sehrc")
 
 [node name="RightArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 409.0
+offset_left = 408.0
 offset_top = 1095.0
-offset_right = 545.0
+offset_right = 544.0
 offset_bottom = 1170.0
 texture_normal = ExtResource("18_a3oov")
 script = ExtResource("19_sehrc")
@@ -411,7 +422,11 @@ script = ExtResource("6_3qtck")
 
 [connection signal="pressed" from="UI/MenuButtons/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/MenuButtons/QuitButton" to="." method="_on_QuitButton_pressed"]
-[connection signal="pressed" from="Score/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="UI/DifficultyButtons/EasyButton" to="." method="_on_HardButton_pressed"]
+[connection signal="pressed" from="UI/DifficultyButtons/MediumButton" to="." method="_on_HarderButton_pressed"]
+[connection signal="pressed" from="UI/DifficultyButtons/HardButton" to="." method="_on_HardestButton_pressed"]
+[connection signal="pressed" from="UI/DifficultyButtons/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Score/BackButton" to="." method="_on_BackButtonDifficulty_pressed"]
 [connection signal="pressed" from="Score/EndOptions/RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="Buttons/Colors/Orange" to="Buttons/Colors/Orange" method="ChangeColor"]
 [connection signal="pressed" from="Buttons/Colors/Blue" to="Buttons/Colors/Blue" method="ChangeColor"]

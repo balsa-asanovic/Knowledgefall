@@ -13,7 +13,7 @@ func _ready():
 
 func ArrowPressed():
 	var path = "res://Scenes/" + str(global.current_color) + "Projectile.tscn"
-	var projectile = load(str(path)).instance()
+	var projectile = load(str(path)).instantiate()
 	
 	add_child(projectile)
 	projectile.position = Vector2(68, 0)
