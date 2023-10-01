@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=28 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://b33c0adejg3il" path="res://Sprites/DiffBlueButton.png" id="13_ohyes"]
 [ext_resource type="Texture2D" uid="uid://ckd6bupdsp3x1" path="res://Sprites/DiffRedButton.png" id="14_h05cj"]
 [ext_resource type="Texture2D" uid="uid://dq2vpcc2rcidp" path="res://Sprites/PurpleButton.png" id="15_4lf36"]
+[ext_resource type="Texture2D" uid="uid://b7sddroc38iha" path="res://Sprites/TopButton.png" id="18_a3oov"]
+[ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_726vx"]
 
@@ -271,6 +273,35 @@ texture_normal = ExtResource("12_qos2n")
 script = ExtResource("9_upre3")
 color = "Blue"
 
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="LeftArrow" type="TextureButton" parent="Arrows"]
+z_index = 3
+offset_left = 30.0
+offset_top = 1095.0
+offset_right = 166.0
+offset_bottom = 1170.0
+texture_normal = ExtResource("18_a3oov")
+script = ExtResource("19_sehrc")
+
+[node name="MiddleArrow" type="TextureButton" parent="Arrows"]
+z_index = 3
+offset_left = 219.0
+offset_top = 1095.0
+offset_right = 355.0
+offset_bottom = 1170.0
+texture_normal = ExtResource("18_a3oov")
+script = ExtResource("19_sehrc")
+
+[node name="RightArrow" type="TextureButton" parent="Arrows"]
+z_index = 3
+offset_left = 409.0
+offset_top = 1095.0
+offset_right = 545.0
+offset_bottom = 1170.0
+texture_normal = ExtResource("18_a3oov")
+script = ExtResource("19_sehrc")
+
 [node name="Emitters" type="Node2D" parent="."]
 
 [node name="Global" type="Node2D" parent="."]
@@ -287,3 +318,6 @@ script = ExtResource("6_3qtck")
 [connection signal="pressed" from="Buttons/Colors/Purple" to="Buttons/Colors/Purple" method="ChangeColor"]
 [connection signal="pressed" from="Buttons/Colors/Green" to="Buttons/Colors/Green" method="ChangeColor"]
 [connection signal="pressed" from="Buttons/Colors/Red" to="Buttons/Colors/Red" method="ChangeColor"]
+[connection signal="pressed" from="Arrows/LeftArrow" to="Arrows/LeftArrow" method="ArrowPressed"]
+[connection signal="pressed" from="Arrows/MiddleArrow" to="Arrows/MiddleArrow" method="ArrowPressed"]
+[connection signal="pressed" from="Arrows/RightArrow" to="Arrows/RightArrow" method="ArrowPressed"]
