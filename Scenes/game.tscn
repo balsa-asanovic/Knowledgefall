@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=30 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
 [ext_resource type="Texture2D" uid="uid://csvwg0keht6t1" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
+[ext_resource type="Script" path="res://Scripts/Score.gd" id="6_j62t7"]
 [ext_resource type="Script" path="res://Scripts/Barrier.gd" id="7_ieytr"]
 [ext_resource type="Texture2D" uid="uid://ckqc01cui7lco" path="res://Sprites/OrangeButton.png" id="8_g7co6"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
@@ -172,6 +173,45 @@ text = "Back"
 flat = true
 
 [node name="Score" type="Node2D" parent="."]
+position = Vector2(0, -400)
+script = ExtResource("6_j62t7")
+
+[node name="Score" type="Label" parent="Score"]
+offset_right = 576.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 255
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="Score"]
+offset_left = 313.0
+offset_top = -140.0
+offset_right = 576.0
+offset_bottom = -90.0
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 30
+text = "High Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Score"]
+offset_left = 7.0
+offset_top = -140.0
+offset_right = 143.0
+offset_bottom = -90.0
+
+[node name="Back" type="Label" parent="Score/TextureButton"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 121.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Buttons" type="Node2D" parent="."]
 position = Vector2(0, 1024)
@@ -335,3 +375,4 @@ script = ExtResource("6_3qtck")
 [connection signal="pressed" from="Arrows/LeftArrow" to="Arrows/LeftArrow" method="ArrowPressed"]
 [connection signal="pressed" from="Arrows/MiddleArrow" to="Arrows/MiddleArrow" method="ArrowPressed"]
 [connection signal="pressed" from="Arrows/RightArrow" to="Arrows/RightArrow" method="ArrowPressed"]
+[connection signal="timeout" from="Emitters/Timer" to="Emitters" method="_on_timer_timeout"]
