@@ -303,6 +303,16 @@ texture_normal = ExtResource("18_a3oov")
 script = ExtResource("19_sehrc")
 
 [node name="Emitters" type="Node2D" parent="."]
+position = Vector2(576, 0)
+
+[node name="LeftEmitter" type="Node2D" parent="Emitters"]
+position = Vector2(100, -100)
+
+[node name="MiddleEmitter" type="Node2D" parent="Emitters"]
+position = Vector2(288, -100)
+
+[node name="RightEmitter" type="Node2D" parent="Emitters"]
+position = Vector2(476, -100)
 
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("6_3qtck")
