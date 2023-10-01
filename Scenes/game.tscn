@@ -1,5 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=31 format=3 uid="uid://b4mvsct8fkqcq"]
 
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
 [ext_resource type="Script" path="res://Scripts/Start.gd" id="2_kweht"]
@@ -39,6 +40,7 @@
 size = Vector2(572.5, 10.75)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_4vf12")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -201,6 +203,7 @@ offset_left = 7.0
 offset_top = -140.0
 offset_right = 143.0
 offset_bottom = -90.0
+metadata/_edit_group_ = true
 
 [node name="Back" type="Label" parent="Score/BackButton"]
 layout_mode = 0
@@ -215,12 +218,14 @@ vertical_alignment = 1
 
 [node name="EndOptions" type="Node2D" parent="Score"]
 position = Vector2(576, -40)
+script = ExtResource("2_gnlmu")
 
 [node name="RestartButton" type="TextureButton" parent="Score/EndOptions"]
 offset_left = 88.0
 offset_top = 350.0
 offset_right = 488.0
 offset_bottom = 440.0
+metadata/_edit_group_ = true
 
 [node name="Try Again" type="Label" parent="Score/EndOptions/RestartButton"]
 layout_mode = 0
@@ -233,10 +238,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Menu" type="TextureButton" parent="Score/EndOptions"]
+visible = false
 offset_left = 88.0
 offset_top = 440.0
 offset_right = 488.0
 offset_bottom = 530.0
+metadata/_edit_group_ = true
 
 [node name="Harder" type="Label" parent="Score/EndOptions/Menu"]
 layout_mode = 0
@@ -396,8 +403,8 @@ position = Vector2(476, -100)
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("6_3qtck")
 
-[connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Start" to="UI/MenuButtons" method="_on_start_pressed"]
-[connection signal="pressed" from="UI/MenuButtons/Difficulty/DifficultyMenu/Back" to="UI/MenuButtons" method="_on_back_pressed"]
+[connection signal="pressed" from="Score/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Score/EndOptions/RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="Buttons/Colors/Orange" to="Buttons/Colors/Orange" method="ChangeColor"]
 [connection signal="pressed" from="Buttons/Colors/Blue" to="Buttons/Colors/Blue" method="ChangeColor"]
 [connection signal="pressed" from="Buttons/Colors/Yellow" to="Buttons/Colors/Yellow" method="ChangeColor"]

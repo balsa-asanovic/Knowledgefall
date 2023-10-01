@@ -10,13 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
-
-func _on_start_pressed():
-	get_node("Start").move(Vector2(-576, 0))
-	get_node("Difficulty").move(Vector2(0, 0))
-
-
-func _on_back_pressed():
-	get_node("Start").move(Vector2(0, 0))
-	get_node("Difficulty").move(Vector2(576, 0))
+func move(target):
+	var move_tween = create_tween()
+	move_tween.tween_property(self, "position", target, 1)
