@@ -13,7 +13,7 @@ func _ready():
 func _process(delta):
 	position.y += y_speed
 	
-	if position.y > 1024 || position.y < -1500 || global.game_over:
+	if position.y > 1024 || position.y < -1500 || global.game_over || global.question_hit:
 		print(position)
 		print("Deleted")
 		queue_free()
@@ -21,7 +21,7 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	if get_node("Area2D").areaType == area.areaType:
 		if ($QuestionMark.visible):
-			global.emit_time = 0
+			global.question_hit = true
 		global.change_score(.5)
 		queue_free()
 	if area.areaType == "Barrier" and y_speed > 0:

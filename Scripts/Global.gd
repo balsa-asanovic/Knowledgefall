@@ -9,6 +9,7 @@ var emit_min = .5
 var emit_delta = .005
 var game_over = false
 var question_frequency = 6
+var question_hit = false
 
 var current_mode = "Hard"
 var current_color = "Green"

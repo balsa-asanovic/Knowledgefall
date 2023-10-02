@@ -41,7 +41,8 @@ func _on_timer_timeout():
 	if (int(randf_range(1, global.question_frequency)) == 2):
 		projectile.toggleQuestionMark()
 		
-	add_child(projectile)
+	if (!global.question_hit):
+		add_child(projectile)
 	
 	randomize()
 	var emit = int(randf_range(1, 4))
