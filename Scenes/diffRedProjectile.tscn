@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2y3ohm5qmp5a"]
+[gd_scene load_steps=6 format=3 uid="uid://c2y3ohm5qmp5a"]
 
 [ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_vexxw"]
 [ext_resource type="Texture2D" uid="uid://hxmsi42emmsg" path="res://Sprites/DiffRedProjectile.png" id="2_01lsx"]
 [ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="3_81ef1"]
+[ext_resource type="Texture2D" uid="uid://lshqsttfnbrm" path="res://Sprites/question_mark.png" id="4_pv3sm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qotdb"]
 
@@ -18,5 +19,10 @@ areaType = "DiffRed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_qotdb")
+
+[node name="QuestionMark" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.102524, 0.0734694)
+texture = ExtResource("4_pv3sm")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

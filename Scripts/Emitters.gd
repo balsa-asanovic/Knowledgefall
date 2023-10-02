@@ -36,6 +36,11 @@ func begin_game():
 func _on_timer_timeout():
 	randomize()
 	var projectile = choices[int(randf_range(0, global.projectile_limit))].instantiate()
+	
+	randomize()
+	if (int(randf_range(1, global.question_frequency)) == 2):
+		projectile.toggleQuestionMark()
+		
 	add_child(projectile)
 	
 	randomize()
