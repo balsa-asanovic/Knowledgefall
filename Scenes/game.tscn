@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=26 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://b7sddroc38iha" path="res://Sprites/TopButton.png" id="18_a3oov"]
 [ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
 [ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]
+[ext_resource type="Script" path="res://Scripts/Question.gd" id="23_i6dem"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myh5y"]
 size = Vector2(572.5, 10.75)
@@ -419,6 +420,72 @@ position = Vector2(476, -100)
 
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("6_3qtck")
+
+[node name="Question" type="Node2D" parent="."]
+position = Vector2(-576, 0)
+script = ExtResource("23_i6dem")
+
+[node name="ColorRect" type="ColorRect" parent="Question"]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0, 0, 0, 0.27451)
+
+[node name="Control" type="Control" parent="Question"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 576.0
+offset_bottom = 1024.0
+
+[node name="QuestionText" type="Label" parent="Question/Control"]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 576.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "What is the capital of France?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Answers" type="Node2D" parent="Question/Control"]
+
+[node name="Option 1" type="Button" parent="Question/Control/Answers"]
+offset_top = 335.0
+offset_right = 576.0
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Moscow"
+
+[node name="Option 2" type="Button" parent="Question/Control/Answers"]
+offset_top = 698.0
+offset_right = 576.0
+offset_bottom = 771.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "London"
+
+[node name="Option 3" type="Button" parent="Question/Control/Answers"]
+offset_top = 577.0
+offset_right = 576.0
+offset_bottom = 650.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Berlin"
+
+[node name="Option 4" type="Button" parent="Question/Control/Answers"]
+offset_top = 456.0
+offset_right = 576.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_ko1tl")
+theme_override_font_sizes/font_size = 64
+text = "Paris"
 
 [connection signal="pressed" from="UI/MenuButtons/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/MenuButtons/QuitButton" to="." method="_on_QuitButton_pressed"]

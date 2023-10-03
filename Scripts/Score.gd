@@ -22,6 +22,7 @@ func _process(delta):
 		global.game_over = true
 		get_node("Score").text = "END"
 
+
 func move(target):
 	var move_tween = create_tween()
 	move_tween.tween_property(self, "position", target, 1)

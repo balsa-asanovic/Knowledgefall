@@ -4,7 +4,29 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var file = FileAccess.open("res://questions.json", FileAccess.READ)
+	var json_string = file.get_as_text()
+	file.close()
+
+	var json = JSON.new()
+	var error = json.parse(json_string)
+	if error == OK:
+		global.questions = json.data.questions
+	else:
+		print("Error while parsing JSON data!")
+
+func _process(delta):
+	if global.question_hit && !global.question_set:
+		var question = get_node("Question")
+		question.move(Vector2(0, 0))
+		randomize()
+		var question_id = int(randf_range(1, 100))
+		get_node("Question/Control/QuestionText").text = global.questions[question_id].question
+		get_node("Question/Control/Answers/Option 1").text = global.questions[question_id].possible_answers[0]
+		get_node("Question/Control/Answers/Option 2").text = global.questions[question_id].possible_answers[1]
+		get_node("Question/Control/Answers/Option 3").text = global.questions[question_id].possible_answers[2]
+		get_node("Question/Control/Answers/Option 4").text = global.questions[question_id].possible_answers[3]
+		global.question_set = true
 
 func _on_StartButton_pressed():
 	get_node("UI/MenuButtons").move(Vector2(-576, 0))
@@ -58,3 +80,6 @@ func _on_RestartButton_pressed():
 func end_options():
 	get_node("Score/EndOptions").move(Vector2(0, -40))
 	get_node("Emitters").move(Vector2(576, 0))
+
+
+

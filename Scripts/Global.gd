@@ -10,6 +10,8 @@ var emit_delta = .005
 var game_over = false
 var question_frequency = 6
 var question_hit = false
+var questions = []
+var question_set = false
 
 var current_mode = "Hard"
 var current_color = "Green"
@@ -42,4 +44,5 @@ func change_score(change):
 	score += change
 	if (emit_time > emit_min):
 		emit_time -= emit_delta
+
 
