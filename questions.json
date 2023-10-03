@@ -1,0 +1,604 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "possible_answers": ["Berlin", "Madrid", "Rome", "Paris"],
+      "correct_answer": "Paris"
+    },
+    {
+      "id": 2,
+      "question": "Which river is the longest in the world?",
+      "possible_answers": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+      "correct_answer": "Nile"
+    },
+    {
+      "id": 3,
+      "question": "In which country would you find the city of Marrakech?",
+      "possible_answers": ["Egypt", "Morocco", "Tunisia", "Algeria"],
+      "correct_answer": "Morocco"
+    },
+    {
+      "id": 4,
+      "question": "What is the highest mountain in the world?",
+      "possible_answers": ["Mount Kilimanjaro", "Mount Everest", "Mount Fuji", "Mount McKinley"],
+      "correct_answer": "Mount Everest"
+    },
+    {
+      "id": 5,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "possible_answers": ["China", "Japan", "South Korea", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "id": 6,
+      "question": "What is the largest desert in the world?",
+      "possible_answers": ["Sahara Desert", "Gobi Desert", "Arabian Desert", "Atacama Desert"],
+      "correct_answer": "Sahara Desert"
+    },
+    {
+      "id": 7,
+      "question": "Which two countries share the longest land border in the world?",
+      "possible_answers": ["Canada and the United States", "Russia and China", "India and Pakistan", "Brazil and Argentina"],
+      "correct_answer": "Canada and the United States"
+    },
+    {
+      "id": 8,
+      "question": "Which continent is the driest and the hottest in terms of temperature?",
+      "possible_answers": ["Africa", "Australia", "South America", "Asia"],
+      "correct_answer": "Australia"
+    },
+    {
+      "id": 9,
+      "question": "What is the capital of South Africa?",
+      "possible_answers": ["Johannesburg", "Pretoria", "Cape Town", "Durban"],
+      "correct_answer": "Pretoria"
+    },
+    {
+      "id": 10,
+      "question": "Which country is known as the Land of Fire and Ice?",
+      "possible_answers": ["Greenland", "Iceland", "Antarctica", "Norway"],
+      "correct_answer": "Iceland"
+    },
+    {
+      "id": 11,
+      "question": "In which ocean would you find the Galapagos Islands?",
+      "possible_answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "correct_answer": "Pacific Ocean"
+    },
+    {
+      "id": 12,
+      "question": "Which river flows through the Grand Canyon?",
+      "possible_answers": ["Mississippi River", "Columbia River", "Colorado River", "Rio Grande"],
+      "correct_answer": "Colorado River"
+    },
+    {
+      "id": 13,
+      "question": "What is the largest country in South America by land area?",
+      "possible_answers": ["Argentina", "Brazil", "Chile", "Peru"],
+      "correct_answer": "Brazil"
+    },
+    {
+      "id": 14,
+      "question": "Which country is known as the Land of a Thousand Lakes?",
+      "possible_answers": ["Sweden", "Canada", "Finland", "Norway"],
+      "correct_answer": "Finland"
+    },
+    {
+      "id": 15,
+      "question": "What is the world's smallest continent?",
+      "possible_answers": ["Asia", "North America", "Australia", "Antarctica"],
+      "correct_answer": "Australia"
+    },
+    {
+      "id": 16,
+      "question": "Which African country is known as the Pearl of Africa?",
+      "possible_answers": ["Kenya", "Tanzania", "Uganda", "Rwanda"],
+      "correct_answer": "Uganda"
+    },
+    {
+      "id": 17,
+      "question": "Which U.S. state is known as the Sunshine State?",
+      "possible_answers": ["California", "Texas", "Florida", "Hawaii"],
+      "correct_answer": "Florida"
+    },
+    {
+      "id": 18,
+      "question": "What is the largest country by land area in the world?",
+      "possible_answers": ["Canada", "Russia", "China", "United States"],
+      "correct_answer": "Russia"
+    },
+    {
+      "id": 19,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "possible_answers": ["China", "Japan", "South Korea", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "id": 20,
+      "question": "In which mountain range is Mount Everest located?",
+      "possible_answers": ["Rocky Mountains", "Andes", "Himalayas", "Alps"],
+      "correct_answer": "Himalayas"
+    },
+    {
+      "id": 21,
+      "question": "Which European country is known as the Land of a Thousand Lakes?",
+      "possible_answers": ["Sweden", "Norway", "Finland", "Denmark"],
+      "correct_answer": "Finland"
+    },
+    {
+      "id": 22,
+      "question": "What is the longest river in Europe?",
+      "possible_answers": ["Volga River", "Danube River", "Loire River", "Thames River"],
+      "correct_answer": "Volga River"
+    },
+    {
+      "id": 23,
+      "question": "Which desert is the largest in North America?",
+      "possible_answers": ["Sahara Desert", "Mojave Desert", "Sonoran Desert", "Atacama Desert"],
+      "correct_answer": "Sonoran Desert"
+    },
+    {
+      "id": 24,
+      "question": "In which U.S. state is the Grand Canyon located?",
+      "possible_answers": ["Arizona", "Nevada", "Utah", "New Mexico"],
+      "correct_answer": "Arizona"
+    },
+    {
+      "id": 25,
+      "question": "Which river flows through Cairo, the capital of Egypt?",
+      "possible_answers": ["Nile River", "Tigris River", "Euphrates River", "Amazon River"],
+      "correct_answer": "Nile River"
+    },
+    {
+      "id": 26,
+      "question": "What is the capital of New Zealand?",
+      "possible_answers": ["Auckland", "Christchurch", "Wellington", "Sydney"],
+      "correct_answer": "Wellington"
+    },
+    {
+      "id": 27,
+      "question": "Which country is known as the Land of the Midnight Sun?",
+      "possible_answers": ["Norway", "Sweden", "Canada", "Russia"],
+      "correct_answer": "Norway"
+    },
+    {
+      "id": 28,
+      "question": "What is the largest ocean in the world?",
+      "possible_answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "correct_answer": "Pacific Ocean"
+    },
+    {
+      "id": 29,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "possible_answers": ["China", "Japan", "South Korea", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "id": 30,
+      "question": "In which mountain range is Mount Kilimanjaro located?",
+      "possible_answers": ["Andes", "Himalayas", "Rocky Mountains", "East African Rift"],
+      "correct_answer": "East African Rift"
+    },
+    {
+      "id": 31,
+      "question": "Which U.S. state is known as the Last Frontier?",
+      "possible_answers": ["Hawaii", "Alaska", "California", "Arizona"],
+      "correct_answer": "Alaska"
+    },
+    {
+      "id": 32,
+      "question": "What is the capital of Argentina?",
+      "possible_answers": ["Buenos Aires", "Sao Paulo", "Lima", "Montevideo"],
+      "correct_answer": "Buenos Aires"
+    },
+    {
+      "id": 33,
+      "question": "Which river forms part of the border between the United States and Mexico?",
+      "possible_answers": ["Rio Grande", "Mississippi River", "Colorado River", "Columbia River"],
+      "correct_answer": "Rio Grande"
+    },
+    {
+      "id": 34,
+      "question": "What is the largest island in the Caribbean?",
+      "possible_answers": ["Cuba", "Hispaniola", "Puerto Rico", "Jamaica"],
+      "correct_answer": "Cuba"
+    },
+    {
+      "id": 35,
+      "question": "In which country would you find the city of Casablanca?",
+      "possible_answers": ["Egypt", "Morocco", "Tunisia", "Algeria"],
+      "correct_answer": "Morocco"
+    },
+    {
+      "id": 36,
+      "question": "Which river flows through Vienna, the capital of Austria?",
+      "possible_answers": ["Danube River", "Rhine River", "Seine River", "Elbe River"],
+      "correct_answer": "Danube River"
+    },
+    {
+      "id": 37,
+      "question": "What is the tallest mountain in North America?",
+      "possible_answers": ["Mount St. Helens", "Mount Elbert", "Mount McKinley", "Mount Rainier"],
+      "correct_answer": "Mount McKinley"
+    },
+    {
+      "id": 38,
+      "question": "Which African country is known as the Rainbow Nation?",
+      "possible_answers": ["Kenya", "Tanzania", "Uganda", "South Africa"],
+      "correct_answer": "South Africa"
+    },
+    {
+      "id": 39,
+      "question": "What is the largest city by population in the world?",
+      "possible_answers": ["Beijing", "New York City", "Tokyo", "Mumbai"],
+      "correct_answer": "Tokyo"
+    },
+    {
+      "id": 40,
+      "question": "In which ocean is the Bermuda Triangle located?",
+      "possible_answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "correct_answer": "Atlantic Ocean"
+    },
+    {
+      "id": 41,
+      "question": "What is the smallest country in the world by land area?",
+      "possible_answers": ["Monaco", "San Marino", "Vatican City", "Andorra"],
+      "correct_answer": "Vatican City"
+    },
+    {
+      "id": 42,
+      "question": "Which river is often called the cradle of civilization?",
+      "possible_answers": ["Nile River", "Tigris River", "Euphrates River", "Indus River"],
+      "correct_answer": "Euphrates River"
+    },
+    {
+      "id": 43,
+      "question": "What is the capital of Brazil?",
+      "possible_answers": ["Sao Paulo", "Brasilia", "Rio de Janeiro", "Buenos Aires"],
+      "correct_answer": "Brasilia"
+    },
+    {
+      "id": 44,
+      "question": "Which European city is known as the City of Canals?",
+      "possible_answers": ["Amsterdam", "Venice", "Bruges", "Copenhagen"],
+      "correct_answer": "Venice"
+    },
+    {
+      "id": 45,
+      "question": "In which country would you find the ancient city of Petra?",
+      "possible_answers": ["Israel", "Egypt", "Jordan", "Lebanon"],
+      "correct_answer": "Jordan"
+    },
+    {
+      "id": 46,
+      "question": "What is the capital of Canada?",
+      "possible_answers": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+      "correct_answer": "Ottawa"
+    },
+    {
+      "id": 47,
+      "question": "Which river is the longest in South America?",
+      "possible_answers": ["Amazon River", "Orinoco River", "Parana River", "Magdalena River"],
+      "correct_answer": "Amazon River"
+    },
+    {
+      "id": 48,
+      "question": "What is the largest lake in Africa by surface area?",
+      "possible_answers": ["Lake Tanganyika", "Lake Victoria", "Lake Malawi", "Lake Turkana"],
+      "correct_answer": "Lake Victoria"
+    },
+    {
+      "id": 49,
+      "question": "In which country is the city of Kyoto located?",
+      "possible_answers": ["China", "South Korea", "Japan", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "id": 50,
+      "question": "Which U.S. state is known as the Land of Enchantment?",
+      "possible_answers": ["Nevada", "New Mexico", "Arizona", "Utah"],
+      "correct_answer": "New Mexico"
+    },
+    {
+      "id": 51,
+      "question": "What is the capital of Australia?",
+      "possible_answers": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
+      "correct_answer": "Canberra"
+    },
+    {
+      "id": 52,
+      "question": "Which river flows through London, the capital of the United Kingdom?",
+      "possible_answers": ["Thames River", "Seine River", "Danube River", "Rhine River"],
+      "correct_answer": "Thames River"
+    },
+    {
+      "id": 53,
+      "question": "In which African country would you find the Atlas Mountains?",
+      "possible_answers": ["Morocco", "Egypt", "Sudan", "Algeria"],
+      "correct_answer": "Morocco"
+    },
+    {
+      "id": 54,
+      "question": "What is the largest desert in Asia?",
+      "possible_answers": ["Gobi Desert", "Sahara Desert", "Arabian Desert", "Atacama Desert"],
+      "correct_answer": "Gobi Desert"
+    },
+    {
+      "id": 55,
+      "question": "Which European city is known as the City of Seven Hills?",
+      "possible_answers": ["Rome", "Lisbon", "Vienna", "Athens"],
+      "correct_answer": "Rome"
+    },
+    {
+      "id": 56,
+      "question": "What is the highest mountain in Africa?",
+      "possible_answers": ["Kilimanjaro", "Mount Kenya", "Simien Mountains", "Ras Dashen"],
+      "correct_answer": "Kilimanjaro"
+    },
+    {
+      "id": 57,
+      "question": "Which U.S. state is known as the Silver State?",
+      "possible_answers": ["Nevada", "Arizona", "Colorado", "Utah"],
+      "correct_answer": "Nevada"
+    },
+    {
+      "id": 58,
+      "question": "What is the capital of Chile?",
+      "possible_answers": ["Buenos Aires", "Montevideo", "Santiago", "Lima"],
+      "correct_answer": "Santiago"
+    },
+    {
+      "id": 59,
+      "question": "In which country is the city of Edinburgh located?",
+      "possible_answers": ["Ireland", "Wales", "Scotland", "England"],
+      "correct_answer": "Scotland"
+    },
+    {
+      "id": 60,
+      "question": "Which river flows through Budapest, the capital of Hungary?",
+      "possible_answers": ["Danube River", "Rhine River", "Seine River", "Tiber River"],
+      "correct_answer": "Danube River"
+    },
+    {
+      "id": 61,
+      "question": "What is the longest river in Africa?",
+      "possible_answers": ["Nile River", "Congo River", "Niger River", "Zambezi River"],
+      "correct_answer": "Nile River"
+    },
+    {
+      "id": 62,
+      "question": "Which country is known as the Land of the Long White Cloud?",
+      "possible_answers": ["Australia", "New Zealand", "Ireland", "Scotland"],
+      "correct_answer": "New Zealand"
+    },
+    {
+      "id": 63,
+      "question": "What is the capital of Turkey?",
+      "possible_answers": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+      "correct_answer": "Ankara"
+    },
+    {
+      "id": 64,
+      "question": "Which U.S. state is known as the Garden State?",
+      "possible_answers": ["New Jersey", "Georgia", "California", "Florida"],
+      "correct_answer": "New Jersey"
+    },
+    {
+      "id": 65,
+      "question": "In which ocean would you find the Maldives?",
+      "possible_answers": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Arctic Ocean"],
+      "correct_answer": "Indian Ocean"
+    },
+    {
+      "id": 66,
+      "question": "What is the capital of South Korea?",
+      "possible_answers": ["Seoul", "Tokyo", "Beijing", "Manila"],
+      "correct_answer": "Seoul"
+    },
+    {
+      "id": 67,
+      "question": "Which river flows through Cairo, the capital of Egypt?",
+      "possible_answers": ["Nile River", "Tigris River", "Euphrates River", "Amazon River"],
+      "correct_answer": "Nile River"
+    },
+    {
+      "id": 68,
+      "question": "What is the highest mountain in Europe?",
+      "possible_answers": ["Mount Elbrus", "Mont Blanc", "Matterhorn", "The Eiger"],
+      "correct_answer": "Mount Elbrus"
+    },
+    {
+      "id": 69,
+      "question": "Which country is known as the Land of a Thousand Islands?",
+      "possible_answers": ["Philippines", "Indonesia", "Malaysia", "Thailand"],
+      "correct_answer": "Indonesia"
+    },
+    {
+      "id": 70,
+      "question": "What is the capital of Spain?",
+      "possible_answers": ["Barcelona", "Madrid", "Valencia", "Seville"],
+      "correct_answer": "Madrid"
+    },
+    {
+      "id": 71,
+      "question": "In which country would you find the city of Vancouver?",
+      "possible_answers": ["Canada", "United States", "Australia", "New Zealand"],
+      "correct_answer": "Canada"
+    },
+    {
+      "id": 72,
+      "question": "What is the largest lake in North America by surface area?",
+      "possible_answers": ["Lake Superior", "Lake Huron", "Lake Erie", "Lake Ontario"],
+      "correct_answer": "Lake Superior"
+    },
+    {
+      "id": 73,
+      "question": "Which European city is known as the City of Spires?",
+      "possible_answers": ["Copenhagen", "Vienna", "Prague", "Amsterdam"],
+      "correct_answer": "Prague"
+    },
+    {
+      "id": 74,
+      "question": "What is the capital of Saudi Arabia?",
+      "possible_answers": ["Dubai", "Mecca", "Riyadh", "Doha"],
+      "correct_answer": "Riyadh"
+    },
+    {
+      "id": 75,
+      "question": "In which country would you find the city of Sydney?",
+      "possible_answers": ["Australia", "New Zealand", "United Kingdom", "Canada"],
+      "correct_answer": "Australia"
+    },
+    {
+      "id": 76,
+      "question": "What is the largest island in the Mediterranean Sea?",
+      "possible_answers": ["Sicily", "Sardinia", "Corsica", "Cyprus"],
+      "correct_answer": "Sicily"
+    },
+    {
+      "id": 77,
+      "question": "Which river flows through Vienna, the capital of Austria?",
+      "possible_answers": ["Danube River", "Rhine River", "Seine River", "Elbe River"],
+      "correct_answer": "Danube River"
+    },
+    {
+      "id": 78,
+      "question": "What is the capital of Peru?",
+      "possible_answers": ["Lima", "Bogota", "Quito", "La Paz"],
+      "correct_answer": "Lima"
+    },
+    {
+      "id": 79,
+      "question": "In which country is the city of Amsterdam located?",
+      "possible_answers": ["Belgium", "Netherlands", "Germany", "Luxembourg"],
+      "correct_answer": "Netherlands"
+    },
+    {
+      "id": 80,
+      "question": "What is the highest mountain in South America?",
+      "possible_answers": ["Cotopaxi", "Aconcagua", "Ojos del Salado", "Nevado Huascarán"],
+      "correct_answer": "Aconcagua"
+    },
+    {
+      "id": 81,
+      "question": "Which U.S. state is known as the Hawkeye State?",
+      "possible_answers": ["Iowa", "Wisconsin", "Illinois", "Minnesota"],
+      "correct_answer": "Iowa"
+    },
+    {
+      "id": 82,
+      "question": "What is the capital of Portugal?",
+      "possible_answers": ["Lisbon", "Madrid", "Barcelona", "Seville"],
+      "correct_answer": "Lisbon"
+    },
+    {
+      "id": 83,
+      "question": "In which country would you find the city of Johannesburg?",
+      "possible_answers": ["South Africa", "Kenya", "Nigeria", "Zimbabwe"],
+      "correct_answer": "South Africa"
+    },
+    {
+      "id": 84,
+      "question": "What is the largest island in Indonesia by land area?",
+      "possible_answers": ["Sumatra", "Java", "Borneo", "Papua"],
+      "correct_answer": "Borneo"
+    },
+    {
+      "id": 85,
+      "question": "Which European country is known as the Land of the Vikings?",
+      "possible_answers": ["Denmark", "Norway", "Iceland", "Sweden"],
+      "correct_answer": "Denmark"
+    },
+    {
+      "id": 86,
+      "question": "What is the capital of Egypt?",
+      "possible_answers": ["Alexandria", "Cairo", "Luxor", "Aswan"],
+      "correct_answer": "Cairo"
+    },
+    {
+      "id": 87,
+      "question": "In which ocean is the Galapagos Islands located?",
+      "possible_answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "correct_answer": "Pacific Ocean"
+    },
+    {
+      "id": 88,
+      "question": "What is the highest mountain in the United States?",
+      "possible_answers": ["Mount Rainier", "Mount St. Helens", "Mount Whitney", "Mount McKinley"],
+      "correct_answer": "Mount McKinley"
+    },
+    {
+      "id": 89,
+      "question": "Which African country is known as the Land of a Thousand Hills?",
+      "possible_answers": ["Tanzania", "Kenya", "Uganda", "Rwanda"],
+      "correct_answer": "Rwanda"
+    },
+    {
+      "id": 90,
+      "question": "What is the capital of Mexico?",
+      "possible_answers": ["Guadalajara", "Monterrey", "Mexico City", "Puebla"],
+      "correct_answer": "Mexico City"
+    },
+    {
+      "id": 91,
+      "question": "In which country would you find the city of Vienna?",
+      "possible_answers": ["Austria", "Switzerland", "Germany", "Hungary"],
+      "correct_answer": "Austria"
+    },
+    {
+      "id": 92,
+      "question": "What is the largest lake in South America by surface area?",
+      "possible_answers": ["Lake Titicaca", "Lake Maracaibo", "Lake Poopo", "Lake Junin"],
+      "correct_answer": "Lake Maracaibo"
+    },
+    {
+      "id": 93,
+      "question": "Which river is the longest in the United States?",
+      "possible_answers": ["Mississippi River", "Missouri River", "Colorado River", "Columbia River"],
+      "correct_answer": "Missouri River"
+    },
+    {
+      "id": 94,
+      "question": "What is the capital of China?",
+      "possible_answers": ["Shanghai", "Beijing", "Hong Kong", "Guangzhou"],
+      "correct_answer": "Beijing"
+    },
+    {
+      "id": 95,
+      "question": "In which ocean is the island of Madagascar located?",
+      "possible_answers": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Arctic Ocean"],
+      "correct_answer": "Indian Ocean"
+    },
+    {
+      "id": 96,
+      "question": "What is the highest mountain in Australia?",
+      "possible_answers": ["Mount Kosciuszko", "Mount Bogong", "Mount Townsend", "Mount Ossa"],
+      "correct_answer": "Mount Kosciuszko"
+    },
+    {
+      "id": 97,
+      "question": "Which U.S. state is known as the Peach State?",
+      "possible_answers": ["Florida", "Georgia", "South Carolina", "Alabama"],
+      "correct_answer": "Georgia"
+    },
+    {
+      "id": 98,
+      "question": "What is the capital of South Africa?",
+      "possible_answers": ["Johannesburg", "Pretoria", "Cape Town", "Durban"],
+      "correct_answer": "Pretoria"
+    },
+    {
+      "id": 99,
+      "question": "In which country would you find the city of Casablanca?",
+      "possible_answers": ["Egypt", "Morocco", "Tunisia", "Algeria"],
+      "correct_answer": "Morocco"
+    },
+    {
+      "id": 100,
+      "question": "Which river is the longest in the world?",
+      "possible_answers": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+      "correct_answer": "Nile"
+    }
+  ]
+}
