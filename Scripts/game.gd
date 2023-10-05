@@ -26,7 +26,11 @@ func _process(delta):
 		get_node("Question/Control/Answers/Option 2").text = global.questions[question_id].possible_answers[1]
 		get_node("Question/Control/Answers/Option 3").text = global.questions[question_id].possible_answers[2]
 		get_node("Question/Control/Answers/Option 4").text = global.questions[question_id].possible_answers[3]
+		global.current_answer = global.questions[question_id].correct_answer
 		global.question_set = true
+	if global.score < 0:
+		var question = get_node("Question")
+		question.move(Vector2(-576, 0))
 
 func _on_StartButton_pressed():
 	get_node("UI/MenuButtons").move(Vector2(-576, 0))

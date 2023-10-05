@@ -508,3 +508,7 @@ text = "Paris"
 [connection signal="pressed" from="Buttons/Arrows/MiddleArrow" to="Buttons/Arrows/MiddleArrow" method="ArrowPressed"]
 [connection signal="pressed" from="Buttons/Arrows/RightArrow" to="Buttons/Arrows/RightArrow" method="ArrowPressed"]
 [connection signal="timeout" from="Emitters/Timer" to="Emitters" method="_on_timer_timeout"]
+[connection signal="pressed" from="Question/Control/Answers/Option 1" to="Question" method="answerOne"]
+[connection signal="pressed" from="Question/Control/Answers/Option 2" to="Question" method="answerTwo"]
+[connection signal="pressed" from="Question/Control/Answers/Option 3" to="Question" method="answerThree"]
+[connection signal="pressed" from="Question/Control/Answers/Option 4" to="Question" method="answerFour"]
