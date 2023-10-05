@@ -18,6 +18,12 @@ func _ready():
 func _process(delta):
 	if global.question_hit && !global.question_set:
 		var question = get_node("Question")
+		
+		get_node("Question/Control/Answers/Option 1").modulate = Color(1, 1, 1, 1)
+		get_node("Question/Control/Answers/Option 2").modulate = Color(1, 1, 1, 1)
+		get_node("Question/Control/Answers/Option 3").modulate = Color(1, 1, 1, 1)
+		get_node("Question/Control/Answers/Option 4").modulate = Color(1, 1, 1, 1)
+		
 		question.move(Vector2(0, 0))
 		randomize()
 		var question_id = int(randf_range(1, 100))
@@ -31,6 +37,16 @@ func _process(delta):
 	if global.score < 0:
 		var question = get_node("Question")
 		question.move(Vector2(-576, 0))
+		global.question_set = false
+		global.current_answer = ""
+		global.question_hit = false
+	if global.correct_answer == true:
+		var question = get_node("Question")
+		question.move(Vector2(-576, 0))
+		global.question_set = false
+		global.current_answer = ""
+		global.question_hit = false
+		global.correct_answer = false
 
 func _on_StartButton_pressed():
 	get_node("UI/MenuButtons").move(Vector2(-576, 0))

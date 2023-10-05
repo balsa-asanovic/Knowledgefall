@@ -33,6 +33,7 @@ func checkAnswer(button):
 	
 	if (answer == global.current_answer):
 		button.modulate = Color(0, 1, 0)
+		global.correct_answer = true
 	else:
 		button.modulate = Color(1, 0, 0)
 		if (get_node("Control/Answers/Option 1").get_text() == global.current_answer):

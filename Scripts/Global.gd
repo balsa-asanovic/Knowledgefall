@@ -13,6 +13,7 @@ var question_hit = false
 var questions = []
 var question_set = false
 var current_answer = ""
+var correct_answer = false
 
 var current_mode = "Hard"
 var current_color = "Green"
