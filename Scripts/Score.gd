@@ -14,12 +14,14 @@ func _process(delta):
 		
 		get_node("HighScore").text = "High Score: " + str(int(global.score))
 		
-	if global.score >= 0:
+	if global.score >= 0 && global.current_screen != "High Score":
 		get_node("Score").text = str(int(global.score))
 	
 	if global.score < 0:
 		get_node("EndOptions").move(Vector2(0, -40))
 		global.game_over = true
+		global.current_screen = "Game Over"
+		get_node("HighScore").visible = true
 		get_node("Score").text = "END"
 
 

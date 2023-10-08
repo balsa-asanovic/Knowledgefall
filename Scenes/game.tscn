@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=28 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -9,7 +9,9 @@
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="6_j62t7"]
 [ext_resource type="Script" path="res://Scripts/Barrier.gd" id="7_ieytr"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="7_r6cla"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="8_4j2lf"]
+[ext_resource type="Script" path="res://Scripts/BackButton.gd" id="8_5il7f"]
 [ext_resource type="Texture2D" uid="uid://ckqc01cui7lco" path="res://Sprites/OrangeButton.png" id="8_g7co6"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
 [ext_resource type="Texture2D" uid="uid://baqojn7birl82" path="res://Sprites/BlueButton.png" id="10_4cf2w"]
@@ -75,21 +77,21 @@ text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsButton" type="TextureButton" parent="UI/MenuButtons"]
+[node name="HighScoreButton" type="TextureButton" parent="UI/MenuButtons"]
 offset_left = 88.0
 offset_top = 440.0
 offset_right = 488.0
 offset_bottom = 530.0
 metadata/_edit_group_ = true
 
-[node name="Settings" type="Label" parent="UI/MenuButtons/SettingsButton"]
+[node name="High Score" type="Label" parent="UI/MenuButtons/HighScoreButton"]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
 theme_override_font_sizes/font_size = 64
-text = "Settings"
+text = "High Score"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -199,6 +201,7 @@ theme_override_font_sizes/font_size = 255
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("7_r6cla")
 
 [node name="HighScore" type="Label" parent="Score"]
 offset_left = 313.0
@@ -217,6 +220,7 @@ offset_left = 7.0
 offset_top = -140.0
 offset_right = 143.0
 offset_bottom = -90.0
+script = ExtResource("8_5il7f")
 metadata/_edit_group_ = true
 
 [node name="Back" type="Label" parent="Score/BackButton"]
@@ -422,13 +426,14 @@ position = Vector2(476, -100)
 script = ExtResource("6_3qtck")
 
 [node name="Question" type="Node2D" parent="."]
+z_index = 6
 position = Vector2(-576, 0)
 script = ExtResource("23_i6dem")
 
 [node name="ColorRect" type="ColorRect" parent="Question"]
 offset_right = 576.0
 offset_bottom = 1024.0
-color = Color(0, 0, 0, 0.27451)
+color = Color(0, 0, 0, 0.784314)
 
 [node name="Control" type="Control" parent="Question"]
 layout_mode = 3
@@ -438,12 +443,12 @@ offset_bottom = 1024.0
 
 [node name="QuestionText" type="Label" parent="Question/Control"]
 layout_mode = 0
-offset_top = 150.0
+offset_top = 2.0
 offset_right = 576.0
-offset_bottom = 286.0
+offset_bottom = 332.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 50
 text = "What is the capital of France?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -488,6 +493,7 @@ theme_override_font_sizes/font_size = 64
 text = "Paris"
 
 [connection signal="pressed" from="UI/MenuButtons/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="UI/MenuButtons/HighScoreButton" to="." method="_on_high_score_button_pressed"]
 [connection signal="pressed" from="UI/MenuButtons/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="UI/DifficultyButtons/EasyButton" to="." method="_on_HardButton_pressed"]
 [connection signal="pressed" from="UI/DifficultyButtons/MediumButton" to="." method="_on_HarderButton_pressed"]
