@@ -19,7 +19,7 @@ func _process(delta):
 		
 		question.move(Vector2(0, 0))
 		randomize()
-		var question_id = int(randf_range(1, 100))
+		var question_id = int(randf_range(1, global.questions.size() - 1))
 		get_node("Question/Control/QuestionText").text = global.questions[question_id].question
 		get_node("Question/Control/Answers/Option 1").text = global.questions[question_id].possible_answers[0]
 		get_node("Question/Control/Answers/Option 2").text = global.questions[question_id].possible_answers[1]
