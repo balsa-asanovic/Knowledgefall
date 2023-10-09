@@ -59,19 +59,31 @@ func _on_BackButton_pressed():
 	get_node("UI/DifficultyButtons").move(Vector2(576, 0))
 	
 func _on_HardButton_pressed():
-	global.current_screen = "In Game"
-	get_node("Score/HighScore").visible = true
-	MoveStuff(0, -400, 576, 0, 0, 150, 0, 762, 0, 0, "Hard", 3, false)
+	if global.current_screen == "High Score Difficulty":
+		global.current_screen = "High Score"
+		show_high_score("Hard")
+	else:
+		global.current_screen = "In Game"
+		get_node("Score/HighScore").visible = true
+		MoveStuff(0, -400, 576, 0, 0, 150, 0, 762, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
-	global.current_screen = "In Game"
-	get_node("Score/HighScore").visible = true
-	MoveStuff(0, -400, 576, 0, 0, 150, 0, 650, 0, 0, "Harder", 6, false)
+	if global.current_screen == "High Score Difficulty":
+		global.current_screen = "High Score"
+		show_high_score("Harder")
+	else:
+		global.current_screen = "In Game"
+		get_node("Score/HighScore").visible = true
+		MoveStuff(0, -400, 576, 0, 0, 150, 0, 650, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
-	global.current_screen = "In Game"
-	get_node("Score/HighScore").visible = true
-	MoveStuff(0, -400, 576, 0, 0, 150, 0, 538, 0, 0, "Hardest", 9, false)
+	if global.current_screen == "High Score Difficulty":
+		global.current_screen = "High Score"
+		show_high_score("Hardest")
+	else:
+		global.current_screen = "In Game"
+		get_node("Score/HighScore").visible = true
+		MoveStuff(0, -400, 576, 0, 0, 150, 0, 538, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
@@ -81,9 +93,9 @@ func _on_BackButtonDifficulty_pressed():
 		MoveStuff(0, 100, 0, 0, 0, -400, 0, 1024, 576, 0, "Hard", 3, true)
 		global.score = 0
 	elif global.current_screen == "High Score":
-		global.current_screen = "Main Menu"
 		get_node("UI").move(Vector2(0, 0))
 		get_node("Score").move(Vector2(0, -400))
+		global.current_screen = "High Score Difficulty"
 		
 	
 func MoveStuff(ui_x, ui_y, db_x, db_y, score_x, score_y, buttons_x, buttons_y, em_x, em_y, mode, limit, over):
@@ -117,10 +129,14 @@ func end_options():
 	get_node("Emitters").move(Vector2(576, 0))
 
 func _on_high_score_button_pressed():
-	global.current_screen = "High Score"
-	var high_score = global.get_high_score("HighScores", "Hard")
-	get_node("Score/Score").set_text(str(high_score))
+	global.current_screen = "High Score Difficulty"
+	get_node("UI/MenuButtons").move(Vector2(-576, 0))
+	get_node("UI/DifficultyButtons").move(Vector2(0, 0))
+
+func show_high_score(difficulty):
+	var high_score = global.get_high_score("HighScores", difficulty)
+	get_node("Score/Score").text = str(high_score)
 	get_node("Score/HighScore").visible = false
 	get_node("UI").move(Vector2(0, 1024))
 	get_node("Score").move(Vector2(0, 150))
-	# get_node("Score/BackButton")
+	#get_node("Score/BackButton")

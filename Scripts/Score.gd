@@ -14,7 +14,7 @@ func _process(delta):
 		
 		get_node("HighScore").text = "High Score: " + str(int(global.score))
 		
-	if global.score >= 0 && global.current_screen != "High Score":
+	if global.score >= 0 && global.current_screen != "High Score" && global.current_screen != "High Score Difficulty":
 		get_node("Score").text = str(int(global.score))
 	
 	if global.score < 0:
