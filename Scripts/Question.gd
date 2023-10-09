@@ -9,7 +9,7 @@ func _ready():
 
 func move(target):
 	var move_tween = create_tween()
-	move_tween.tween_property(self, "position", target, 0.9)
+	move_tween.tween_property(self, "position", target, 1)
 
 
 func answerOne():
@@ -37,12 +37,12 @@ func checkAnswer(button):
 	else:
 		button.modulate = Color(1, 0, 0)
 		if (get_node("Control/Answers/Option 1").get_text() == global.current_answer):
-			get_node("Control/Answers/Option 1").modulate = Color(0, 1, 0)
+			get_node("Control/Answers/Option 1").modulate = Color(0, 2, 0)
 		elif (get_node("Control/Answers/Option 2").get_text() == global.current_answer):
-			get_node("Control/Answers/Option 2").modulate = Color(0, 1, 0)
+			get_node("Control/Answers/Option 2").modulate = Color(0, 2, 0)
 		elif (get_node("Control/Answers/Option 3").get_text() == global.current_answer):
-			get_node("Control/Answers/Option 3").modulate = Color(0, 1, 0)
+			get_node("Control/Answers/Option 3").modulate = Color(0, 2, 0)
 		elif (get_node("Control/Answers/Option 3").get_text() == global.current_answer):
-			get_node("Control/Answers/Option 3").modulate = Color(0, 1, 0)
+			get_node("Control/Answers/Option 3").modulate = Color(0, 2, 0)
 		
 		global.score = -1

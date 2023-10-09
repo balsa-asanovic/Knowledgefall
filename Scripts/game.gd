@@ -4,18 +4,11 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var file = FileAccess.open("res://questions.json", FileAccess.READ)
-	var json_string = file.get_as_text()
-	file.close()
-
-	var json = JSON.new()
-	var error = json.parse(json_string)
-	if error == OK:
-		global.questions = json.data.questions
-	else:
-		print("Error while parsing JSON data!")
+	load_questions()
 
 func _process(delta):
+	if global.questions.size() < 3:
+		load_questions()
 	if global.question_hit && !global.question_set:
 		var question = get_node("Question")
 		
@@ -33,6 +26,7 @@ func _process(delta):
 		get_node("Question/Control/Answers/Option 3").text = global.questions[question_id].possible_answers[2]
 		get_node("Question/Control/Answers/Option 4").text = global.questions[question_id].possible_answers[3]
 		global.current_answer = global.questions[question_id].correct_answer
+		global.questions.remove_at(question_id)
 		global.question_set = true
 	if global.score < 0:
 		var question = get_node("Question")
@@ -139,4 +133,15 @@ func show_high_score(difficulty):
 	get_node("Score/HighScore").visible = false
 	get_node("UI").move(Vector2(0, 1024))
 	get_node("Score").move(Vector2(0, 150))
-	#get_node("Score/BackButton")
+
+func load_questions():
+	var file = FileAccess.open("res://questions.json", FileAccess.READ)
+	var json_string = file.get_as_text()
+	file.close()
+
+	var json = JSON.new()
+	var error = json.parse(json_string)
+	if error == OK:
+		global.questions = json.data.questions
+	else:
+		print("Error while parsing JSON data!")
