@@ -599,6 +599,606 @@
       "question": "Which river is the longest in the world?",
       "possible_answers": ["Nile", "Amazon", "Yangtze", "Mississippi"],
       "correct_answer": "Nile"
+    },
+    {
+      "id": 101,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 102,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 103,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 104,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 105,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 106,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 107,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 108,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 109,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 110,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 111,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 112,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 113,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 114,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 115,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 116,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 117,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 118,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 119,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 120,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 121,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 122,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 123,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 124,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 125,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 126,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 127,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 128,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 129,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 130,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 131,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 132,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 133,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 134,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 135,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 136,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 137,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 138,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 139,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 140,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 141,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 142,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 143,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 144,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 145,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 146,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 147,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 148,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 149,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 150,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 151,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 152,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 153,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 154,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 155,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 156,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 157,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 158,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 159,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 160,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Egyptians", "Mesopotamians"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 161,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 162,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 163,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 164,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 165,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 166,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 167,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 168,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 169,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 170,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 171,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 172,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 173,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 174,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 175,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 176,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 177,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 178,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 179,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 180,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The sinking of the Lusitania", "The assassination of Archduke Franz Ferdinand", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 181,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 182,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 183,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 184,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 185,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 186,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 187,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 188,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The assassination of Archduke Franz Ferdinand", "The sinking of the Lusitania", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 189,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 190,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 191,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 192,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
+    },
+    {
+      "id": 193,
+      "question": "What was the period of political and social upheaval in France during the late 18th century called?",
+      "possible_answers": ["The Enlightenment", "The Renaissance", "The French Revolution", "The Industrial Revolution"],
+      "correct_answer": "The French Revolution"
+    },
+    {
+      "id": 194,
+      "question": "Which civilization built the pyramids of Egypt?",
+      "possible_answers": ["Mayans", "Greeks", "Romans", "Ancient Egyptians"],
+      "correct_answer": "Ancient Egyptians"
+    },
+    {
+      "id": 195,
+      "question": "Who was the first President of the United States?",
+      "possible_answers": ["John Adams", "Thomas Jefferson", "George Washington", "Benjamin Franklin"],
+      "correct_answer": "George Washington"
+    },
+    {
+      "id": 196,
+      "question": "What event marked the beginning of World War I?",
+      "possible_answers": ["The assassination of Archduke Franz Ferdinand", "The sinking of the Lusitania", "The Battle of Stalingrad", "The signing of the Treaty of Versailles"],
+      "correct_answer": "The assassination of Archduke Franz Ferdinand"
+    },
+    {
+      "id": 197,
+      "question": "Who wrote the 'I Have a Dream' speech?",
+      "possible_answers": ["John F. Kennedy", "Martin Luther King Jr.", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "correct_answer": "Martin Luther King Jr."
+    },
+    {
+      "id": 198,
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "possible_answers": ["1492", "1507", "1530", "1620"],
+      "correct_answer": "1492"
+    },
+    {
+      "id": 199,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "possible_answers": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "correct_answer": "Amelia Earhart"
+    },
+    {
+      "id": 200,
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "possible_answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Andrew Jackson"],
+      "correct_answer": "Abraham Lincoln"
     }
   ]
 }
