@@ -303,7 +303,7 @@ offset_right = 188.0
 offset_bottom = 368.0
 texture_normal = ExtResource("8_g7co6")
 script = ExtResource("9_upre3")
-color = "Orange"
+color = "orange"
 
 [node name="Blue" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 12.0
@@ -312,7 +312,7 @@ offset_right = 188.0
 offset_bottom = 256.0
 texture_normal = ExtResource("10_4cf2w")
 script = ExtResource("9_upre3")
-color = "Blue"
+color = "blue"
 
 [node name="Yellow" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 388.0
@@ -321,7 +321,7 @@ offset_right = 564.0
 offset_bottom = 368.0
 texture_normal = ExtResource("11_3puej")
 script = ExtResource("9_upre3")
-color = "Yellow"
+color = "yellow"
 
 [node name="DiffGreen" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 388.0
@@ -330,7 +330,7 @@ offset_right = 564.0
 offset_bottom = 480.0
 texture_normal = ExtResource("12_x4q4c")
 script = ExtResource("9_upre3")
-color = "DiffGreen"
+color = "diffGreen"
 
 [node name="DiffBlue" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 200.0
@@ -339,7 +339,7 @@ offset_right = 376.0
 offset_bottom = 480.0
 texture_normal = ExtResource("13_ohyes")
 script = ExtResource("9_upre3")
-color = "DiffBlue"
+color = "diffBlue"
 
 [node name="DiffRed" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 12.0
@@ -348,7 +348,7 @@ offset_right = 188.0
 offset_bottom = 480.0
 texture_normal = ExtResource("14_h05cj")
 script = ExtResource("9_upre3")
-color = "DiffRed"
+color = "diffRed"
 
 [node name="Purple" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 200.0
@@ -357,7 +357,7 @@ offset_right = 376.0
 offset_bottom = 368.0
 texture_normal = ExtResource("15_4lf36")
 script = ExtResource("9_upre3")
-color = "Purple"
+color = "purple"
 
 [node name="Green" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 200.0
@@ -366,7 +366,7 @@ offset_right = 376.0
 offset_bottom = 256.0
 texture_normal = ExtResource("11_gb8le")
 script = ExtResource("9_upre3")
-color = "Green"
+color = "green"
 
 [node name="Red" type="TextureButton" parent="Buttons/Colors"]
 offset_left = 388.0
@@ -375,7 +375,7 @@ offset_right = 564.0
 offset_bottom = 256.0
 texture_normal = ExtResource("12_qos2n")
 script = ExtResource("9_upre3")
-color = "Red"
+color = "red"
 
 [node name="Arrows" type="Node2D" parent="Buttons"]
 position = Vector2(0, -1024)

@@ -14,7 +14,7 @@ func _ready():
 func ArrowPressed():
 	var path = "res://Scenes/" + str(global.current_color) + "Projectile.tscn"
 	var projectile = load(str(path)).instantiate()
-	global.change_score(1)
+
 	add_child(projectile)
 	projectile.position = Vector2(68, 0)
 	projectile.y_speed = -int(global.projectile_speed)
