@@ -16,7 +16,7 @@ func ArrowPressed():
 	var projectile = load(str(path)).instantiate()
 	
 	var projectileCount = get_child_count()
-	if projectileCount < global.projectile_limit:
+	if projectileCount < 1:
 		add_child(projectile)
 
 	projectile.position = Vector2(68, 0)

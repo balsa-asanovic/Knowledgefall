@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=30 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -27,6 +27,15 @@
 [ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]
 [ext_resource type="Script" path="res://Scripts/Question.gd" id="23_i6dem"]
 
+[sub_resource type="Gradient" id="Gradient_rm21a"]
+offsets = PackedFloat32Array(0, 0.990099)
+colors = PackedColorArray(0.0823529, 0.6, 0.341176, 1, 0.0823529, 0.341176, 0.6, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2co4"]
+gradient = SubResource("Gradient_rm21a")
+width = 576
+height = 1024
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myh5y"]
 size = Vector2(572.5, 10.75)
 
@@ -40,6 +49,12 @@ custom_minimum_size = Vector2(576, 1024)
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.898039, 0.74902, 0.607843, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_e2co4")
 
 [node name="UI" type="Node2D" parent="."]
 script = ExtResource("2_0pstm")
