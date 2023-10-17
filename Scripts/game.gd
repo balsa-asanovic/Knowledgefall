@@ -19,7 +19,44 @@ func _process(delta):
 		
 		question.move(Vector2(0, 0))
 		randomize()
-		var question_id = int(randf_range(1, global.questions.size() - 1))
+		var question_id = 110#int(randf_range(1, global.questions.size() - 1))
+		
+		# adjusting font size to fit button width
+		var font = load("res://Fonts/Gugi-Regular.ttf")
+		var font_size_1 = 64
+		var font_size_2 = 64
+		var font_size_3 = 64
+		var font_size_4 = 64
+		var font_size_5 = 50
+		var font_string_size1 = font.get_string_size(global.questions[question_id].possible_answers[0], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_1)
+		var font_string_size2 = font.get_string_size(global.questions[question_id].possible_answers[1], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_2)
+		var font_string_size3 = font.get_string_size(global.questions[question_id].possible_answers[2], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_3)
+		var font_string_size4 = font.get_string_size(global.questions[question_id].possible_answers[3], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_4)
+		var font_string_size5 = font.get_string_size(global.questions[question_id].question, HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_5)
+		
+		while(font_string_size1.x > 535 || font_string_size2.x > 535 || font_string_size3.x > 535 || font_string_size4.x > 535 || font_string_size5.x > 2000):
+			if(font_string_size1.x > 535):
+				font_size_1 -= 1
+				font_string_size1 = font.get_string_size(global.questions[question_id].possible_answers[0], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_1)
+			if(font_string_size2.x > 535):
+				font_size_2 -= 1
+				font_string_size2 = font.get_string_size(global.questions[question_id].possible_answers[1], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_2)
+			if(font_string_size3.x > 535):
+				font_size_3 -= 1
+				font_string_size3 = font.get_string_size(global.questions[question_id].possible_answers[2], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_3)
+			if(font_string_size4.x > 535):
+				font_size_4 -= 1
+				font_string_size4 = font.get_string_size(global.questions[question_id].possible_answers[3], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_4)
+			if(font_string_size5.x > 2000):
+				font_size_5 -= 1
+				font_string_size5 = font.get_string_size(global.questions[question_id].question, HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_5)
+		
+		get_node("Question/Control/Answers/Option 1").add_theme_font_size_override("font_size", font_size_1)
+		get_node("Question/Control/Answers/Option 2").add_theme_font_size_override("font_size", font_size_2)
+		get_node("Question/Control/Answers/Option 3").add_theme_font_size_override("font_size", font_size_3)
+		get_node("Question/Control/Answers/Option 4").add_theme_font_size_override("font_size", font_size_4)
+		get_node("Question/Control/QuestionText").add_theme_font_size_override("font_size", font_size_5)
+		
 		get_node("Question/Control/QuestionText").text = global.questions[question_id].question
 		get_node("Question/Control/Answers/Option 1").text = global.questions[question_id].possible_answers[0]
 		get_node("Question/Control/Answers/Option 2").text = global.questions[question_id].possible_answers[1]
