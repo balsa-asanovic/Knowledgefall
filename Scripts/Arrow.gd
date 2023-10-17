@@ -14,8 +14,11 @@ func _ready():
 func ArrowPressed():
 	var path = "res://Scenes/" + str(global.current_color) + "Projectile.tscn"
 	var projectile = load(str(path)).instantiate()
+	
+	var projectileCount = get_child_count()
+	if projectileCount < global.projectile_limit:
+		add_child(projectile)
 
-	add_child(projectile)
 	projectile.position = Vector2(68, 0)
 	projectile.y_speed = -int(global.projectile_speed)
 
