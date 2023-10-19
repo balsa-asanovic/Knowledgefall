@@ -59,6 +59,7 @@ motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(576, 1024)
 
 [node name="BigRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(288, 512)
 texture = ExtResource("2_ghboq")
 
@@ -66,6 +67,7 @@ texture = ExtResource("2_ghboq")
 motion_mirroring = Vector2(576, 1024)
 
 [node name="SmallRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(288, 512)
 texture = ExtResource("3_7glwu")
 
