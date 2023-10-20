@@ -13,7 +13,7 @@ func _ready():
 func _process(delta):
 	position.y += y_speed
 	
-	if position.y > 1024 || position.y < -1500 || global.game_over || global.question_hit:
+	if position.y > 1920 || position.y < -1500 || global.game_over || global.question_hit:
 		print(position)
 		print("Deleted")
 		queue_free()

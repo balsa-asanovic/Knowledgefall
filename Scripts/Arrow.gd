@@ -19,7 +19,7 @@ func ArrowPressed():
 	if projectileCount < 1:
 		add_child(projectile)
 
-	projectile.position = Vector2(68, 0)
+	projectile.position = Vector2(127, 0)
 	projectile.y_speed = -int(global.projectile_speed)
 
 

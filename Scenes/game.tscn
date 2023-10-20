@@ -8,27 +8,27 @@
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
 [ext_resource type="Texture2D" uid="uid://b1vnru1wgs2pm" path="res://Art/small_rectangles.png" id="3_7glwu"]
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
-[ext_resource type="Texture2D" uid="uid://csvwg0keht6t1" path="res://Sprites/Banner.png" id="6_0njkx"]
+[ext_resource type="Texture2D" uid="uid://yhbxyy7x7t3q" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="6_j62t7"]
 [ext_resource type="Script" path="res://Scripts/Barrier.gd" id="7_ieytr"]
 [ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="7_r6cla"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="8_4j2lf"]
 [ext_resource type="Script" path="res://Scripts/BackButton.gd" id="8_5il7f"]
-[ext_resource type="Texture2D" uid="uid://ckqc01cui7lco" path="res://Sprites/OrangeButton.png" id="8_g7co6"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
-[ext_resource type="Texture2D" uid="uid://baqojn7birl82" path="res://Sprites/BlueButton.png" id="10_4cf2w"]
-[ext_resource type="Texture2D" uid="uid://cx40ons8rcaj6" path="res://Sprites/YellowButton.png" id="11_3puej"]
-[ext_resource type="Texture2D" uid="uid://deffpk3acc3u3" path="res://Sprites/GreenButton.png" id="11_gb8le"]
-[ext_resource type="Texture2D" uid="uid://b0afxekicttip" path="res://Sprites/RedButton.png" id="12_qos2n"]
-[ext_resource type="Texture2D" uid="uid://b3q0pa7x1b1mh" path="res://Sprites/DiffGreenButton.png" id="12_x4q4c"]
-[ext_resource type="Texture2D" uid="uid://b33c0adejg3il" path="res://Sprites/DiffBlueButton.png" id="13_ohyes"]
-[ext_resource type="Texture2D" uid="uid://ckd6bupdsp3x1" path="res://Sprites/DiffRedButton.png" id="14_h05cj"]
-[ext_resource type="Texture2D" uid="uid://dq2vpcc2rcidp" path="res://Sprites/PurpleButton.png" id="15_4lf36"]
-[ext_resource type="Texture2D" uid="uid://b7sddroc38iha" path="res://Sprites/TopButton.png" id="18_a3oov"]
+[ext_resource type="Texture2D" uid="uid://bsgh5i8ol7om7" path="res://Sprites/OrangeButtonBig.png" id="15_smlmu"]
+[ext_resource type="Texture2D" uid="uid://m7ry6jx8w32d" path="res://Sprites/BlueButtonBig.png" id="17_q4xej"]
+[ext_resource type="Texture2D" uid="uid://bsn5v0rbwra7g" path="res://Sprites/YellowButtonBig.png" id="18_10njv"]
+[ext_resource type="Texture2D" uid="uid://dr7sg37j8n8rl" path="res://Sprites/DiffGreenButtonBig.png" id="19_a6eja"]
 [ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
+[ext_resource type="Texture2D" uid="uid://bdsh8g308xosl" path="res://Sprites/DiffBlueButtonBig.png" id="20_whh46"]
 [ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]
+[ext_resource type="Texture2D" uid="uid://b04jkgoskcby6" path="res://Sprites/DiffRedButtonBig.png" id="21_13god"]
+[ext_resource type="Texture2D" uid="uid://d0ajwmfib1gg3" path="res://Sprites/PurpleButtonBig.png" id="22_42dty"]
 [ext_resource type="Script" path="res://Scripts/Question.gd" id="23_i6dem"]
+[ext_resource type="Texture2D" uid="uid://babo8pnjjwmmv" path="res://Sprites/GreenButtonBig.png" id="23_q4fwf"]
+[ext_resource type="Texture2D" uid="uid://cy588tpb8jflc" path="res://Sprites/RedButtonBig.png" id="24_j41k3"]
+[ext_resource type="Texture2D" uid="uid://buwe2117gfcg0" path="res://Sprites/TopButtonBig.png" id="25_gekgq"]
 
 [sub_resource type="Gradient" id="Gradient_rm21a"]
 offsets = PackedFloat32Array(0, 0.990099)
@@ -40,7 +40,7 @@ width = 576
 height = 1024
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myh5y"]
-size = Vector2(572.5, 10.75)
+size = Vector2(1075, 7.375)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_4vf12")
@@ -49,14 +49,14 @@ script = ExtResource("1_4vf12")
 script = ExtResource("2_6fjl2")
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
-custom_minimum_size = Vector2(576, 1024)
+custom_minimum_size = Vector2(1080, 1920)
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.898039, 0.74902, 0.607843, 1)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(576, 1024)
+motion_mirroring = Vector2(1080, 1920)
 
 [node name="BigRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -64,7 +64,7 @@ position = Vector2(288, 512)
 texture = ExtResource("2_ghboq")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(576, 1024)
+motion_mirroring = Vector2(1080, 1920)
 
 [node name="SmallRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -92,12 +92,12 @@ script = ExtResource("2_0pstm")
 
 [node name="Title" type="Label" parent="UI"]
 custom_minimum_size = Vector2(576, 80)
-offset_top = 150.0
-offset_right = 576.0
-offset_bottom = 300.0
+offset_top = 603.0
+offset_right = 1080.0
+offset_bottom = 753.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 120
 text = "KnowledgeFall"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -106,142 +106,135 @@ vertical_alignment = 1
 script = ExtResource("2_gnlmu")
 
 [node name="StartButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_left = 88.0
-offset_top = 350.0
-offset_right = 488.0
-offset_bottom = 440.0
+offset_top = 813.0
+offset_right = 1080.0
+offset_bottom = 917.0
 metadata/_edit_group_ = true
 
 [node name="Start" type="Label" parent="UI/MenuButtons/StartButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HighScoreButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_left = 88.0
-offset_top = 440.0
-offset_right = 488.0
-offset_bottom = 530.0
+offset_top = 1000.0
+offset_right = 1080.0
+offset_bottom = 1104.0
 metadata/_edit_group_ = true
 
 [node name="High Score" type="Label" parent="UI/MenuButtons/HighScoreButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "High Score"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuitButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_left = 88.0
-offset_top = 530.0
-offset_right = 488.0
-offset_bottom = 620.0
+offset_top = 1187.0
+offset_right = 1080.0
+offset_bottom = 1291.0
 metadata/_edit_group_ = true
 
 [node name="Quit" type="Label" parent="UI/MenuButtons/QuitButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Quit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyButtons" type="Node2D" parent="UI"]
-position = Vector2(576, 0)
+position = Vector2(1080, 0)
 script = ExtResource("5_pyqkn")
 
 [node name="EasyButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_left = 88.0
-offset_top = 350.0
-offset_right = 488.0
-offset_bottom = 440.0
+offset_top = 813.0
+offset_right = 1080.0
+offset_bottom = 903.0
 metadata/_edit_group_ = true
 
 [node name="Easy" type="Label" parent="UI/DifficultyButtons/EasyButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Easy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MediumButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_left = 88.0
-offset_top = 440.0
-offset_right = 488.0
-offset_bottom = 530.0
+offset_top = 1000.0
+offset_right = 1080.0
+offset_bottom = 1090.0
 metadata/_edit_group_ = true
 
 [node name="Medium" type="Label" parent="UI/DifficultyButtons/MediumButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Medium"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HardButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_left = 88.0
-offset_top = 540.0
-offset_right = 488.0
-offset_bottom = 630.0
+offset_top = 1187.0
+offset_right = 1080.0
+offset_bottom = 1277.0
 metadata/_edit_group_ = true
 
 [node name="Hard" type="Label" parent="UI/DifficultyButtons/HardButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Hard"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_left = 88.0
-offset_top = 670.0
-offset_right = 488.0
-offset_bottom = 760.0
+offset_top = 1374.0
+offset_right = 1080.0
+offset_bottom = 1464.0
 metadata/_edit_group_ = true
 
 [node name="Back" type="Label" parent="UI/DifficultyButtons/BackButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Score" type="Node2D" parent="."]
-position = Vector2(0, -400)
+position = Vector2(0, -1000)
 script = ExtResource("6_j62t7")
 
 [node name="Score" type="Label" parent="Score"]
-offset_right = 576.0
-offset_bottom = 400.0
+offset_right = 1080.0
+offset_bottom = 1000.0
 theme_override_fonts/font = ExtResource("1_ko1tl")
 theme_override_font_sizes/font_size = 255
 text = "0"
@@ -250,9 +243,9 @@ vertical_alignment = 1
 script = ExtResource("7_r6cla")
 
 [node name="HighScore" type="Label" parent="Score"]
-offset_left = 313.0
+offset_left = 817.0
 offset_top = -140.0
-offset_right = 576.0
+offset_right = 1080.0
 offset_bottom = -90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
@@ -282,19 +275,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EndOptions" type="Node2D" parent="Score"]
-position = Vector2(576, -40)
+position = Vector2(1080, -40)
 script = ExtResource("2_gnlmu")
 
 [node name="RestartButton" type="TextureButton" parent="Score/EndOptions"]
-offset_left = 88.0
-offset_top = 350.0
-offset_right = 488.0
-offset_bottom = 440.0
+offset_top = 650.0
+offset_right = 1080.0
+offset_bottom = 740.0
 metadata/_edit_group_ = true
 
 [node name="Try Again" type="Label" parent="Score/EndOptions/RestartButton"]
 layout_mode = 0
-offset_right = 400.0
+offset_right = 1080.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
@@ -322,12 +314,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buttons" type="Node2D" parent="."]
-position = Vector2(0, 1024)
+position = Vector2(0, 1920)
 script = ExtResource("8_4j2lf")
+
+[node name="ColorRect" type="ColorRect" parent="Buttons"]
+visible = false
+custom_minimum_size = Vector2(1080, 937.5)
+offset_top = 20.0
+offset_right = 1080.0
+offset_bottom = 957.5
+color = Color(0.898039, 0.74902, 0.607843, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Buttons"]
 z_index = 3
-position = Vector2(288, 268)
+position = Vector2(541, 485)
 texture = ExtResource("6_0njkx")
 
 [node name="Barrier" type="Area2D" parent="Buttons/Sprite2D"]
@@ -336,90 +336,90 @@ script = ExtResource("7_ieytr")
 areaType = "Barrier"
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Buttons/Sprite2D/Barrier"]
-position = Vector2(2, -14)
+position = Vector2(-0.5, -232.688)
 shape = SubResource("RectangleShape2D_myh5y")
 
 [node name="Colors" type="Node2D" parent="Buttons"]
 z_index = 5
 
 [node name="Orange" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 12.0
-offset_top = 268.0
-offset_right = 188.0
-offset_bottom = 368.0
-texture_normal = ExtResource("8_g7co6")
+offset_left = 11.0
+offset_top = 447.0
+offset_right = 341.0
+offset_bottom = 635.0
+texture_normal = ExtResource("15_smlmu")
 script = ExtResource("9_upre3")
 color = "orange"
 
 [node name="Blue" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 12.0
-offset_top = 156.0
-offset_right = 188.0
-offset_bottom = 256.0
-texture_normal = ExtResource("10_4cf2w")
+offset_left = 11.0
+offset_top = 241.0
+offset_right = 341.0
+offset_bottom = 429.0
+texture_normal = ExtResource("17_q4xej")
 script = ExtResource("9_upre3")
 color = "blue"
 
 [node name="Yellow" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 388.0
-offset_top = 268.0
-offset_right = 564.0
-offset_bottom = 368.0
-texture_normal = ExtResource("11_3puej")
+offset_left = 733.0
+offset_top = 447.0
+offset_right = 1063.0
+offset_bottom = 635.0
+texture_normal = ExtResource("18_10njv")
 script = ExtResource("9_upre3")
 color = "yellow"
 
 [node name="DiffGreen" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 388.0
-offset_top = 380.0
-offset_right = 564.0
-offset_bottom = 480.0
-texture_normal = ExtResource("12_x4q4c")
+offset_left = 733.0
+offset_top = 652.0
+offset_right = 1063.0
+offset_bottom = 840.0
+texture_normal = ExtResource("19_a6eja")
 script = ExtResource("9_upre3")
 color = "diffGreen"
 
 [node name="DiffBlue" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 200.0
-offset_top = 380.0
-offset_right = 376.0
-offset_bottom = 480.0
-texture_normal = ExtResource("13_ohyes")
+offset_left = 374.0
+offset_top = 652.0
+offset_right = 704.0
+offset_bottom = 840.0
+texture_normal = ExtResource("20_whh46")
 script = ExtResource("9_upre3")
 color = "diffBlue"
 
 [node name="DiffRed" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 12.0
-offset_top = 380.0
-offset_right = 188.0
-offset_bottom = 480.0
-texture_normal = ExtResource("14_h05cj")
+offset_left = 11.0
+offset_top = 652.0
+offset_right = 341.0
+offset_bottom = 840.0
+texture_normal = ExtResource("21_13god")
 script = ExtResource("9_upre3")
 color = "diffRed"
 
 [node name="Purple" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 200.0
-offset_top = 268.0
-offset_right = 376.0
-offset_bottom = 368.0
-texture_normal = ExtResource("15_4lf36")
+offset_left = 374.0
+offset_top = 447.0
+offset_right = 704.0
+offset_bottom = 635.0
+texture_normal = ExtResource("22_42dty")
 script = ExtResource("9_upre3")
 color = "purple"
 
 [node name="Green" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 200.0
-offset_top = 156.0
-offset_right = 376.0
-offset_bottom = 256.0
-texture_normal = ExtResource("11_gb8le")
+offset_left = 374.0
+offset_top = 241.0
+offset_right = 704.0
+offset_bottom = 429.0
+texture_normal = ExtResource("23_q4fwf")
 script = ExtResource("9_upre3")
 color = "green"
 
 [node name="Red" type="TextureButton" parent="Buttons/Colors"]
-offset_left = 388.0
-offset_top = 156.0
-offset_right = 564.0
-offset_bottom = 256.0
-texture_normal = ExtResource("12_qos2n")
+offset_left = 733.0
+offset_top = 241.0
+offset_right = 1063.0
+offset_bottom = 429.0
+texture_normal = ExtResource("24_j41k3")
 script = ExtResource("9_upre3")
 color = "red"
 
@@ -428,43 +428,42 @@ position = Vector2(0, -1024)
 
 [node name="LeftArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 32.0
-offset_top = 1095.0
-offset_right = 168.0
-offset_bottom = 1170.0
-texture_normal = ExtResource("18_a3oov")
+offset_left = 43.0
+offset_top = 1100.0
+offset_right = 298.0
+offset_bottom = 1241.0
+texture_normal = ExtResource("25_gekgq")
 script = ExtResource("19_sehrc")
 
 [node name="MiddleArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 220.0
-offset_top = 1095.0
-offset_right = 356.0
-offset_bottom = 1170.0
-texture_normal = ExtResource("18_a3oov")
+offset_left = 414.0
+offset_top = 1100.0
+offset_right = 669.0
+offset_bottom = 1241.0
+texture_normal = ExtResource("25_gekgq")
 script = ExtResource("19_sehrc")
 
 [node name="RightArrow" type="TextureButton" parent="Buttons/Arrows"]
 z_index = 3
-offset_left = 408.0
-offset_top = 1095.0
-offset_right = 544.0
-offset_bottom = 1170.0
-texture_normal = ExtResource("18_a3oov")
+offset_left = 765.0
+offset_top = 1100.0
+offset_right = 1020.0
+offset_bottom = 1241.0
+texture_normal = ExtResource("25_gekgq")
 script = ExtResource("19_sehrc")
 
 [node name="Emitters" type="Node2D" parent="."]
-position = Vector2(576, 0)
 script = ExtResource("20_xdnvf")
 
 [node name="LeftEmitter" type="Node2D" parent="Emitters"]
-position = Vector2(100, -100)
+position = Vector2(170, -100)
 
 [node name="MiddleEmitter" type="Node2D" parent="Emitters"]
-position = Vector2(288, -100)
+position = Vector2(541, -100)
 
 [node name="RightEmitter" type="Node2D" parent="Emitters"]
-position = Vector2(476, -100)
+position = Vector2(893, -100)
 
 [node name="Timer" type="Timer" parent="Emitters"]
 
@@ -473,28 +472,28 @@ script = ExtResource("6_3qtck")
 
 [node name="Question" type="Node2D" parent="."]
 z_index = 6
-position = Vector2(-576, 0)
+position = Vector2(-1080, 0)
 script = ExtResource("23_i6dem")
 
 [node name="ColorRect" type="ColorRect" parent="Question"]
-offset_right = 576.0
-offset_bottom = 1024.0
+offset_right = 1080.0
+offset_bottom = 1920.0
 color = Color(0, 0, 0, 0.784314)
 
 [node name="Control" type="Control" parent="Question"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 576.0
-offset_bottom = 1024.0
+offset_right = 1080.0
+offset_bottom = 1920.0
 
 [node name="QuestionText" type="Label" parent="Question/Control"]
 layout_mode = 0
-offset_top = 2.0
-offset_right = 576.0
-offset_bottom = 332.0
+offset_top = 210.0
+offset_right = 1080.0
+offset_bottom = 680.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 120
 text = "What is the capital of France?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -503,39 +502,43 @@ autowrap_mode = 2
 [node name="Answers" type="Node2D" parent="Question/Control"]
 
 [node name="Option 1" type="Button" parent="Question/Control/Answers"]
-offset_top = 335.0
-offset_right = 576.0
-offset_bottom = 408.0
+custom_minimum_size = Vector2(0, 109)
+offset_top = 801.0
+offset_right = 1080.0
+offset_bottom = 874.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Moscow"
 
 [node name="Option 2" type="Button" parent="Question/Control/Answers"]
-offset_top = 698.0
-offset_right = 576.0
-offset_bottom = 771.0
+custom_minimum_size = Vector2(0, 109)
+offset_top = 1371.0
+offset_right = 1080.0
+offset_bottom = 1480.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "London"
 
 [node name="Option 3" type="Button" parent="Question/Control/Answers"]
-offset_top = 577.0
-offset_right = 576.0
-offset_bottom = 650.0
+custom_minimum_size = Vector2(0, 109)
+offset_top = 1181.0
+offset_right = 1080.0
+offset_bottom = 1290.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Berlin"
 
 [node name="Option 4" type="Button" parent="Question/Control/Answers"]
-offset_top = 456.0
-offset_right = 576.0
-offset_bottom = 529.0
+custom_minimum_size = Vector2(0, 109)
+offset_top = 991.0
+offset_right = 1080.0
+offset_bottom = 1100.0
 theme_override_colors/font_color = Color(0.286275, 0.490196, 0.196078, 1)
 theme_override_fonts/font = ExtResource("1_ko1tl")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 100
 text = "Paris"
 
 [connection signal="pressed" from="UI/MenuButtons/StartButton" to="." method="_on_StartButton_pressed"]

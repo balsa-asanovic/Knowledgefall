@@ -19,35 +19,35 @@ func _process(delta):
 		
 		question.move(Vector2(0, 0))
 		randomize()
-		var question_id = int(randf_range(1, global.questions.size() - 1))
+		var question_id = 185#int(randf_range(1, global.questions.size() - 1))
 		
 		# adjusting font size to fit button width
 		var font = load("res://Fonts/Gugi-Regular.ttf")
-		var font_size_1 = 64
-		var font_size_2 = 64
-		var font_size_3 = 64
-		var font_size_4 = 64
-		var font_size_5 = 50
+		var font_size_1 = 100
+		var font_size_2 = 100
+		var font_size_3 = 100
+		var font_size_4 = 100
+		var font_size_5 = 120
 		var font_string_size1 = font.get_string_size(global.questions[question_id].possible_answers[0], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_1)
 		var font_string_size2 = font.get_string_size(global.questions[question_id].possible_answers[1], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_2)
 		var font_string_size3 = font.get_string_size(global.questions[question_id].possible_answers[2], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_3)
 		var font_string_size4 = font.get_string_size(global.questions[question_id].possible_answers[3], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_4)
 		var font_string_size5 = font.get_string_size(global.questions[question_id].question, HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_5)
 		
-		while(font_string_size1.x > 535 || font_string_size2.x > 535 || font_string_size3.x > 535 || font_string_size4.x > 535 || font_string_size5.x > 2000):
-			if(font_string_size1.x > 535):
+		while(font_string_size1.x > 1050 || font_string_size2.x > 1050 || font_string_size3.x > 1050 || font_string_size4.x > 1050 || font_string_size5.x > 3750):
+			if(font_string_size1.x > 1050):
 				font_size_1 -= 1
 				font_string_size1 = font.get_string_size(global.questions[question_id].possible_answers[0], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_1)
-			if(font_string_size2.x > 535):
+			if(font_string_size2.x > 1050):
 				font_size_2 -= 1
 				font_string_size2 = font.get_string_size(global.questions[question_id].possible_answers[1], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_2)
-			if(font_string_size3.x > 535):
+			if(font_string_size3.x > 1050):
 				font_size_3 -= 1
 				font_string_size3 = font.get_string_size(global.questions[question_id].possible_answers[2], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_3)
-			if(font_string_size4.x > 535):
+			if(font_string_size4.x > 1050):
 				font_size_4 -= 1
 				font_string_size4 = font.get_string_size(global.questions[question_id].possible_answers[3], HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_4)
-			if(font_string_size5.x > 2000):
+			if(font_string_size5.x > 3750):
 				font_size_5 -= 1
 				font_string_size5 = font.get_string_size(global.questions[question_id].question, HORIZONTAL_ALIGNMENT_CENTER, -1, font_size_5)
 		
@@ -67,13 +67,13 @@ func _process(delta):
 		global.question_set = true
 	if global.score < 0:
 		var question = get_node("Question")
-		question.move(Vector2(-576, 0))
+		question.move(Vector2(-1080, 0))
 		global.question_set = false
 		global.current_answer = ""
 		global.question_hit = false
 	if global.correct_answer == true:
 		var question = get_node("Question")
-		question.move(Vector2(-576, 0))
+		question.move(Vector2(-1080, 0))
 		global.question_set = false
 		global.current_answer = ""
 		global.question_hit = false
@@ -81,13 +81,13 @@ func _process(delta):
 
 func _on_StartButton_pressed():
 	global.current_screen = "Difficulty Selection"
-	get_node("UI/MenuButtons").move(Vector2(-576, 0))
+	get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 	get_node("UI/DifficultyButtons").move(Vector2(0, 0))
 
 func _on_BackButton_pressed():
 	global.current_screen = "Main Menu"
 	get_node("UI/MenuButtons").move(Vector2(0, 0))
-	get_node("UI/DifficultyButtons").move(Vector2(576, 0))
+	get_node("UI/DifficultyButtons").move(Vector2(1080, 0))
 	
 func _on_HardButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -96,7 +96,7 @@ func _on_HardButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -400, 576, 0, 0, 150, 0, 762, 0, 0, "Hard", 3, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1480, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -105,7 +105,7 @@ func _on_HarderButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -400, 576, 0, 0, 150, 0, 650, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1280, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -114,18 +114,18 @@ func _on_HardestButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -400, 576, 0, 0, 150, 0, 538, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1070, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
 		global.current_screen = "Difficulty Selection"
-		get_node("UI/MenuButtons").move(Vector2(-576, 0))
-		get_node("Score/EndOptions").move(Vector2(576, -40))
-		MoveStuff(0, 100, 0, 0, 0, -400, 0, 1024, 576, 0, "Hard", 3, true)
+		get_node("UI/MenuButtons").move(Vector2(-1080, 0))
+		get_node("Score/EndOptions").move(Vector2(1080, -40))
+		MoveStuff(0, 100, 0, 0, 0, -1000, 0, 1920, 1080, 0, "Hard", 3, true)
 		global.score = 0
 	elif global.current_screen == "High Score":
 		get_node("UI").move(Vector2(0, 0))
-		get_node("Score").move(Vector2(0, -400))
+		get_node("Score").move(Vector2(0, -1000))
 		global.current_screen = "High Score Difficulty"
 		
 	
@@ -150,25 +150,25 @@ func _on_QuitButton_pressed():
 
 func _on_RestartButton_pressed():
 	get_node("Emitters").begin_game()
-	get_node("Score/EndOptions").move(Vector2(576, -40))
+	get_node("Score/EndOptions").move(Vector2(1080, -40))
 	
 	global.score = 0
 	global.game_over = false
 
 func end_options():
 	get_node("Score/EndOptions").move(Vector2(0, -40))
-	get_node("Emitters").move(Vector2(576, 0))
+	get_node("Emitters").move(Vector2(1080, 0))
 
 func _on_high_score_button_pressed():
 	global.current_screen = "High Score Difficulty"
-	get_node("UI/MenuButtons").move(Vector2(-576, 0))
+	get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 	get_node("UI/DifficultyButtons").move(Vector2(0, 0))
 
 func show_high_score(difficulty):
 	var high_score = global.get_high_score("HighScores", difficulty)
 	get_node("Score/Score").text = str(high_score)
 	get_node("Score/HighScore").visible = false
-	get_node("UI").move(Vector2(0, 1024))
+	get_node("UI").move(Vector2(0, 1920))
 	get_node("Score").move(Vector2(0, 150))
 
 func load_questions():
