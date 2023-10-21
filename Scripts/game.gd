@@ -19,7 +19,7 @@ func _process(delta):
 		
 		question.move(Vector2(0, 0))
 		randomize()
-		var question_id = 185#int(randf_range(1, global.questions.size() - 1))
+		var question_id = int(randf_range(1, global.questions.size() - 1))
 		
 		# adjusting font size to fit button width
 		var font = load("res://Fonts/Gugi-Regular.ttf")

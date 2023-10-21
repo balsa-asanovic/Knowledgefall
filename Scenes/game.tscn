@@ -4,9 +4,9 @@
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="2_0pstm"]
 [ext_resource type="Script" path="res://Scripts/MoveBackground.gd" id="2_6fjl2"]
-[ext_resource type="Texture2D" uid="uid://687mjvjlaaq6" path="res://Art/big_rectangles.png" id="2_ghboq"]
+[ext_resource type="Texture2D" uid="uid://xjaiygo2y7g6" path="res://Art/big_rectangles.png" id="2_ghboq"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
-[ext_resource type="Texture2D" uid="uid://b1vnru1wgs2pm" path="res://Art/small_rectangles.png" id="3_7glwu"]
+[ext_resource type="Texture2D" uid="uid://c4jabmhje7qam" path="res://Art/small_rectangles.png" id="3_7glwu"]
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
 [ext_resource type="Texture2D" uid="uid://yhbxyy7x7t3q" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
@@ -60,7 +60,7 @@ motion_mirroring = Vector2(1080, 1920)
 
 [node name="BigRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(288, 512)
+position = Vector2(540, 960)
 texture = ExtResource("2_ghboq")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -68,7 +68,7 @@ motion_mirroring = Vector2(1080, 1920)
 
 [node name="SmallRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(288, 512)
+position = Vector2(540, 960)
 texture = ExtResource("3_7glwu")
 
 [node name="Background" type="Node2D" parent="."]
