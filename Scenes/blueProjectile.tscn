@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bn8cniafxt0bn"]
 
 [ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_3yn22"]
-[ext_resource type="Texture2D" uid="uid://cn3svxybk410n" path="res://Sprites/BlueProjectile.png" id="1_prr8w"]
+[ext_resource type="Texture2D" uid="uid://1n0ipiubhrwg" path="res://Sprites/BlueProjectileBig.png" id="2_7ju5p"]
 [ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="3_nmg4y"]
 [ext_resource type="Texture2D" uid="uid://lshqsttfnbrm" path="res://Sprites/question_mark.png" id="4_x4mlb"]
 
@@ -11,7 +11,7 @@
 script = ExtResource("1_3yn22")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_prr8w")
+texture = ExtResource("2_7ju5p")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_nmg4y")
