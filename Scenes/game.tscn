@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=34 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xjaiygo2y7g6" path="res://Art/big_rectangles.png" id="2_ghboq"]
 [ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_gnlmu"]
 [ext_resource type="Texture2D" uid="uid://c4jabmhje7qam" path="res://Art/small_rectangles.png" id="3_7glwu"]
+[ext_resource type="Texture2D" uid="uid://b03gj3xs7a6vx" path="res://Art/bg5.png" id="3_l14ec"]
 [ext_resource type="Script" path="res://Scripts/Difficulty.gd" id="5_pyqkn"]
 [ext_resource type="Texture2D" uid="uid://yhbxyy7x7t3q" path="res://Sprites/Banner.png" id="6_0njkx"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="6_3qtck"]
@@ -53,6 +54,10 @@ custom_minimum_size = Vector2(1080, 1920)
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.898039, 0.74902, 0.607843, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(540, 960)
+texture = ExtResource("3_l14ec")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
