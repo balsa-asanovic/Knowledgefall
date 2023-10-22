@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=35 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="8_4j2lf"]
 [ext_resource type="Script" path="res://Scripts/BackButton.gd" id="8_5il7f"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
+[ext_resource type="Texture2D" uid="uid://2sbygjk4t74m" path="res://Art/title_logo_2.png" id="10_25lm2"]
 [ext_resource type="Texture2D" uid="uid://bsgh5i8ol7om7" path="res://Sprites/OrangeButtonBig.png" id="15_smlmu"]
 [ext_resource type="Texture2D" uid="uid://m7ry6jx8w32d" path="res://Sprites/BlueButtonBig.png" id="17_q4xej"]
 [ext_resource type="Texture2D" uid="uid://bsn5v0rbwra7g" path="res://Sprites/YellowButtonBig.png" id="18_10njv"]
@@ -64,6 +65,7 @@ motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(1080, 1920)
 
 [node name="BigRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(540, 960)
 texture = ExtResource("2_ghboq")
@@ -72,6 +74,7 @@ texture = ExtResource("2_ghboq")
 motion_mirroring = Vector2(1080, 1920)
 
 [node name="SmallRectangles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(540, 960)
 texture = ExtResource("3_7glwu")
@@ -95,7 +98,13 @@ texture = SubResource("GradientTexture2D_e2co4")
 [node name="UI" type="Node2D" parent="."]
 script = ExtResource("2_0pstm")
 
+[node name="TitleLogo" type="Sprite2D" parent="UI"]
+position = Vector2(540, 533)
+scale = Vector2(1.05469, 1)
+texture = ExtResource("10_25lm2")
+
 [node name="Title" type="Label" parent="UI"]
+visible = false
 custom_minimum_size = Vector2(576, 80)
 offset_top = 603.0
 offset_right = 1080.0
@@ -111,9 +120,9 @@ vertical_alignment = 1
 script = ExtResource("2_gnlmu")
 
 [node name="StartButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 813.0
+offset_top = 1000.0
 offset_right = 1080.0
-offset_bottom = 917.0
+offset_bottom = 1104.0
 metadata/_edit_group_ = true
 
 [node name="Start" type="Label" parent="UI/MenuButtons/StartButton"]
@@ -128,9 +137,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HighScoreButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 1000.0
+offset_top = 1187.0
 offset_right = 1080.0
-offset_bottom = 1104.0
+offset_bottom = 1291.0
 metadata/_edit_group_ = true
 
 [node name="High Score" type="Label" parent="UI/MenuButtons/HighScoreButton"]
@@ -145,9 +154,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuitButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 1187.0
+offset_top = 1374.0
 offset_right = 1080.0
-offset_bottom = 1291.0
+offset_bottom = 1478.0
 metadata/_edit_group_ = true
 
 [node name="Quit" type="Label" parent="UI/MenuButtons/QuitButton"]
@@ -166,9 +175,9 @@ position = Vector2(1080, 0)
 script = ExtResource("5_pyqkn")
 
 [node name="EasyButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 813.0
+offset_top = 1000.0
 offset_right = 1080.0
-offset_bottom = 903.0
+offset_bottom = 1090.0
 metadata/_edit_group_ = true
 
 [node name="Easy" type="Label" parent="UI/DifficultyButtons/EasyButton"]
@@ -183,9 +192,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MediumButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1000.0
+offset_top = 1187.0
 offset_right = 1080.0
-offset_bottom = 1090.0
+offset_bottom = 1277.0
 metadata/_edit_group_ = true
 
 [node name="Medium" type="Label" parent="UI/DifficultyButtons/MediumButton"]
@@ -200,9 +209,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HardButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1187.0
+offset_top = 1374.0
 offset_right = 1080.0
-offset_bottom = 1277.0
+offset_bottom = 1464.0
 metadata/_edit_group_ = true
 
 [node name="Hard" type="Label" parent="UI/DifficultyButtons/HardButton"]
@@ -217,9 +226,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1374.0
+offset_top = 1561.0
 offset_right = 1080.0
-offset_bottom = 1464.0
+offset_bottom = 1651.0
 metadata/_edit_group_ = true
 
 [node name="Back" type="Label" parent="UI/DifficultyButtons/BackButton"]
