@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b4mvsct8fkqcq"]
+[gd_scene load_steps=42 format=3 uid="uid://b4mvsct8fkqcq"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_4vf12"]
 [ext_resource type="FontFile" uid="uid://dh3p4axw42sw0" path="res://Fonts/Gugi-Regular.ttf" id="1_ko1tl"]
@@ -18,7 +18,14 @@
 [ext_resource type="Script" path="res://Scripts/BackButton.gd" id="8_5il7f"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_upre3"]
 [ext_resource type="Texture2D" uid="uid://2sbygjk4t74m" path="res://Art/title_logo_2.png" id="10_25lm2"]
+[ext_resource type="Texture2D" uid="uid://mtjklng5yoio" path="res://Art/startButton.png" id="10_cxcdr"]
+[ext_resource type="Texture2D" uid="uid://c3cxnd64gamqs" path="res://Art/highScoreButton.png" id="11_6d3fr"]
+[ext_resource type="Texture2D" uid="uid://bj2h3n03u2xxk" path="res://Art/quitButton.png" id="12_yyx0t"]
+[ext_resource type="Texture2D" uid="uid://drn7oqgydhtjw" path="res://Art/easyButton.png" id="14_kbeom"]
+[ext_resource type="Texture2D" uid="uid://b0u0lha21sgik" path="res://Art/mediumButton.png" id="15_b3pm4"]
 [ext_resource type="Texture2D" uid="uid://bsgh5i8ol7om7" path="res://Sprites/OrangeButtonBig.png" id="15_smlmu"]
+[ext_resource type="Texture2D" uid="uid://dqheg3vh5fq0p" path="res://Art/hardButton.png" id="16_hivwc"]
+[ext_resource type="Texture2D" uid="uid://drpy2sky0cwdv" path="res://Art/menuButton.png" id="17_3v6n1"]
 [ext_resource type="Texture2D" uid="uid://m7ry6jx8w32d" path="res://Sprites/BlueButtonBig.png" id="17_q4xej"]
 [ext_resource type="Texture2D" uid="uid://bsn5v0rbwra7g" path="res://Sprites/YellowButtonBig.png" id="18_10njv"]
 [ext_resource type="Texture2D" uid="uid://dr7sg37j8n8rl" path="res://Sprites/DiffGreenButtonBig.png" id="19_a6eja"]
@@ -120,12 +127,15 @@ vertical_alignment = 1
 script = ExtResource("2_gnlmu")
 
 [node name="StartButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 1000.0
+offset_top = 1045.0
 offset_right = 1080.0
-offset_bottom = 1104.0
+offset_bottom = 1262.0
+texture_normal = ExtResource("10_cxcdr")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Start" type="Label" parent="UI/MenuButtons/StartButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -137,12 +147,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HighScoreButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 1187.0
+offset_top = 1292.0
 offset_right = 1080.0
-offset_bottom = 1291.0
+offset_bottom = 1506.0
+texture_normal = ExtResource("11_6d3fr")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="High Score" type="Label" parent="UI/MenuButtons/HighScoreButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -154,12 +167,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuitButton" type="TextureButton" parent="UI/MenuButtons"]
-offset_top = 1374.0
+offset_top = 1540.0
 offset_right = 1080.0
-offset_bottom = 1478.0
+offset_bottom = 1736.0
+texture_normal = ExtResource("12_yyx0t")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Quit" type="Label" parent="UI/MenuButtons/QuitButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -175,12 +191,15 @@ position = Vector2(1080, 0)
 script = ExtResource("5_pyqkn")
 
 [node name="EasyButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1000.0
+offset_top = 1040.0
 offset_right = 1080.0
-offset_bottom = 1090.0
+offset_bottom = 1247.0
+texture_normal = ExtResource("14_kbeom")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Easy" type="Label" parent="UI/DifficultyButtons/EasyButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -192,12 +211,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MediumButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1187.0
+offset_top = 1490.0
 offset_right = 1080.0
-offset_bottom = 1277.0
+offset_bottom = 1699.0
+texture_normal = ExtResource("15_b3pm4")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Medium" type="Label" parent="UI/DifficultyButtons/MediumButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -209,12 +231,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HardButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1374.0
+offset_top = 1270.0
 offset_right = 1080.0
-offset_bottom = 1464.0
+offset_bottom = 1467.0
+texture_normal = ExtResource("16_hivwc")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Hard" type="Label" parent="UI/DifficultyButtons/HardButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
@@ -226,12 +251,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1561.0
+offset_top = 1721.0
 offset_right = 1080.0
-offset_bottom = 1651.0
+offset_bottom = 1859.0
+texture_normal = ExtResource("17_3v6n1")
+stretch_mode = 5
 metadata/_edit_group_ = true
 
 [node name="Back" type="Label" parent="UI/DifficultyButtons/BackButton"]
+visible = false
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 90.0
