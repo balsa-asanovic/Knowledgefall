@@ -5,6 +5,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_questions()
+	
+	var screen_size = DisplayServer.screen_get_size()
+	
+	get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.x / 1920
 
 func _process(delta):
 	if global.questions.size() < 3:

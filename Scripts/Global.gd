@@ -25,10 +25,15 @@ var save_file_path = "user://save-file.cfg"
 var config = ConfigFile.new()
 var load_response = config.load(save_file_path)
 
+var screen_size_x = 0
+var screen_size_y = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var screen_size = DisplayServer.screen_get_size()
+	
+	screen_size_x = screen_size.x
+	screen_size_y = screen_size.y
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
