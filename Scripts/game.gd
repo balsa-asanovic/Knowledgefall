@@ -131,7 +131,7 @@ func _on_BackButtonDifficulty_pressed():
 		global.current_screen = "Difficulty Selection"
 		get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 		get_node("Score/EndOptions").move(Vector2(1080, -40))
-		MoveStuff(0, 0, 0, 0, 0, -1000, 0, 1920, 1080, 0, "Hard", 3, true)
+		MoveStuff(0, 0, 0, 0, 0, -1000, 0, global.screen_size_y, 1080, 0, "Hard", 3, true)
 		global.score = 0
 	elif global.current_screen == "High Score":
 		get_node("UI").move(Vector2(0, 0))
