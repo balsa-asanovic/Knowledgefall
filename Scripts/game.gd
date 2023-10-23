@@ -9,11 +9,12 @@ func _ready():
 	var osName = OS.get_name()
 	var screen_size = DisplayServer.screen_get_size()
 	if osName == "iOS" || osName == "Android":
+		get_node("ParallaxBackground/Sprite2D").position.y = screen_size.y / 2
 		get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.y / 1920.0
 		get_node("Buttons").position.y = screen_size.y
 	if osName == "iOS":
-		get_node("UI/MenuButtons/HighScoreButton").position.y = 0.76 * screen_size.y
-		get_node("UI/MenuButtons/StartButton").position.y = 0.6 * screen_size.y
+		get_node("UI/MenuButtons/HighScoreButton").position.y = 0.56 * screen_size.y
+		get_node("UI/MenuButtons/StartButton").position.y = 0.4 * screen_size.y
 
 func _process(delta):
 	if global.questions.size() < 3:
