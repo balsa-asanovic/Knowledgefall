@@ -30,10 +30,15 @@ var screen_size_y = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	var screen_size = DisplayServer.screen_get_size()
 	
-	screen_size_x = screen_size.x
-	screen_size_y = screen_size.y
+	if OS.get_name() == "Windows":
+		screen_size_x = screen_size.y
+		screen_size_y = screen_size.x
+	else:
+		screen_size_x = screen_size.x
+		screen_size_y = screen_size.y
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

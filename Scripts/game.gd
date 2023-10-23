@@ -6,9 +6,14 @@ extends Node2D
 func _ready():
 	load_questions()
 	
+	var osName = OS.get_name()
 	var screen_size = DisplayServer.screen_get_size()
-	
-	get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.x / 1920
+	if osName == "iOS" || osName == "Android":
+		get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.y / 1920.0
+		get_node("Buttons").position.y = screen_size.y
+	if osName == "iOS":
+		get_node("UI/MenuButtons/HighScoreButton").position.y = 0.76 * screen_size.y
+		get_node("UI/MenuButtons/StartButton").position.y = 0.6 * screen_size.y
 
 func _process(delta):
 	if global.questions.size() < 3:
@@ -100,7 +105,7 @@ func _on_HardButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1480, 0, 0, "Hard", 3, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.77 * global.screen_size_y, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -109,7 +114,7 @@ func _on_HarderButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1280, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.66 * global.screen_size_y, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -118,14 +123,14 @@ func _on_HardestButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 1070, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.55 * global.screen_size_y, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
 		global.current_screen = "Difficulty Selection"
 		get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 		get_node("Score/EndOptions").move(Vector2(1080, -40))
-		MoveStuff(0, 100, 0, 0, 0, -1000, 0, 1920, 1080, 0, "Hard", 3, true)
+		MoveStuff(0, 0, 0, 0, 0, -1000, 0, 1920, 1080, 0, "Hard", 3, true)
 		global.score = 0
 	elif global.current_screen == "High Score":
 		get_node("UI").move(Vector2(0, 0))

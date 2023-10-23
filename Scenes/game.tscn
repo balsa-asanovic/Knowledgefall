@@ -211,9 +211,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MediumButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1490.0
+offset_top = 1270.0
 offset_right = 1080.0
-offset_bottom = 1699.0
+offset_bottom = 1479.0
 texture_normal = ExtResource("15_b3pm4")
 stretch_mode = 5
 metadata/_edit_group_ = true
@@ -231,9 +231,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HardButton" type="TextureButton" parent="UI/DifficultyButtons"]
-offset_top = 1270.0
+offset_top = 1490.0
 offset_right = 1080.0
-offset_bottom = 1467.0
+offset_bottom = 1687.0
 texture_normal = ExtResource("16_hivwc")
 stretch_mode = 5
 metadata/_edit_group_ = true
