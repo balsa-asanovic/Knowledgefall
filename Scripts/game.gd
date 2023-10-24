@@ -106,7 +106,7 @@ func _on_HardButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.77 * global.screen_size_y, 0, 0, "Hard", 3, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 441.6, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -115,7 +115,7 @@ func _on_HarderButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.66 * global.screen_size_y, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 652.8, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -124,7 +124,7 @@ func _on_HardestButton_pressed():
 	else:
 		global.current_screen = "In Game"
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, 0.55 * global.screen_size_y, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 864, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
