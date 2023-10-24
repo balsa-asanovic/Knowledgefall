@@ -12,6 +12,8 @@ func _ready():
 		get_node("ParallaxBackground/Sprite2D").position.y = screen_size.y / 2
 		get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.y / 1920.0
 		get_node("Buttons").position.y = screen_size.y
+		if screen_size.y / 1920.0 >= 1.2:
+			get_node("UI/DifficultyButtons").position.y = 200
 	if osName == "iOS":
 		get_node("UI/MenuButtons/HighScoreButton").position.y = 0.66 * screen_size.y
 		get_node("UI/MenuButtons/StartButton").position.y = 0.5 * screen_size.y
