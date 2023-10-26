@@ -6,8 +6,19 @@ extends Node2D
 func _ready():
 	load_questions()
 	
+	get_node("Buttons/Colors/Blue").hide()
+	get_node("Buttons/Colors/Red").hide()
+	get_node("Buttons/Colors/Yellow").hide()
+	get_node("Buttons/Colors/Green").hide()
+	get_node("Buttons/Colors/Purple").hide()
+	get_node("Buttons/Colors/Orange").hide()
+	get_node("Buttons/Colors/DiffBlue").hide()
+	get_node("Buttons/Colors/DiffGreen").hide()
+	get_node("Buttons/Colors/DiffRed").hide()
+	
 	var osName = OS.get_name()
-	var screen_size = DisplayServer.screen_get_size()
+	# var screen_size = DisplayServer.screen_get_size()
+	var screen_size = get_viewport_rect().size
 	if osName == "iOS" || osName == "Android":
 		get_node("ParallaxBackground/Sprite2D").position.y = screen_size.y / 2
 		get_node("ParallaxBackground/Sprite2D").scale.y = screen_size.y / 1920.0
@@ -17,6 +28,8 @@ func _ready():
 			get_node("UI/DifficultyButtons").position.y = 200
 			get_node("Question/Control/QuestionText").position.y += 100
 			get_node("Question/Control/Answers").position.y = 100
+
+	# because there is no quit button on iOS
 	if osName == "iOS":
 		get_node("UI/MenuButtons/HighScoreButton").position.y = 0.66 * screen_size.y
 		get_node("UI/MenuButtons/StartButton").position.y = 0.5 * screen_size.y
@@ -97,7 +110,7 @@ func _process(delta):
 func _on_StartButton_pressed():
 	global.current_screen = "Difficulty Selection"
 	get_node("UI/MenuButtons").move(Vector2(-1080, 0))
-	get_node("UI/DifficultyButtons").move(Vector2(0, 0))
+	get_node("UI/DifficultyButtons").move(Vector2(0, get_node("UI/DifficultyButtons").position.y))
 
 func _on_BackButton_pressed():
 	global.current_screen = "Main Menu"
@@ -110,8 +123,17 @@ func _on_HardButton_pressed():
 		show_high_score("Hard")
 	else:
 		global.current_screen = "In Game"
+		get_node("Buttons/Colors/Blue").show()
+		get_node("Buttons/Colors/Red").show()
+		get_node("Buttons/Colors/Green").show()
+		get_node("Buttons/Colors/Yellow").hide()
+		get_node("Buttons/Colors/Purple").hide()
+		get_node("Buttons/Colors/Orange").hide()
+		get_node("Buttons/Colors/DiffBlue").hide()
+		get_node("Buttons/Colors/DiffGreen").hide()
+		get_node("Buttons/Colors/DiffRed").hide()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 441.6, 0, 0, "Hard", 3, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 435, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -119,8 +141,17 @@ func _on_HarderButton_pressed():
 		show_high_score("Harder")
 	else:
 		global.current_screen = "In Game"
+		get_node("Buttons/Colors/Blue").show()
+		get_node("Buttons/Colors/Red").show()
+		get_node("Buttons/Colors/Green").show()
+		get_node("Buttons/Colors/Yellow").show()
+		get_node("Buttons/Colors/Purple").show()
+		get_node("Buttons/Colors/Orange").show()
+		get_node("Buttons/Colors/DiffBlue").hide()
+		get_node("Buttons/Colors/DiffGreen").hide()
+		get_node("Buttons/Colors/DiffRed").hide()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 652.8, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 645, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -128,8 +159,17 @@ func _on_HardestButton_pressed():
 		show_high_score("Hardest")
 	else:
 		global.current_screen = "In Game"
+		get_node("Buttons/Colors/Blue").show()
+		get_node("Buttons/Colors/Red").show()
+		get_node("Buttons/Colors/Green").show()
+		get_node("Buttons/Colors/Yellow").show()
+		get_node("Buttons/Colors/Purple").show()
+		get_node("Buttons/Colors/Orange").show()
+		get_node("Buttons/Colors/DiffBlue").show()
+		get_node("Buttons/Colors/DiffGreen").show()
+		get_node("Buttons/Colors/DiffRed").show()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, 150, 0, global.screen_size_y - 864, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 855, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
@@ -184,7 +224,7 @@ func show_high_score(difficulty):
 	get_node("Score/Score").text = str(high_score)
 	get_node("Score/HighScore").visible = false
 	get_node("UI").move(Vector2(0, 1920))
-	get_node("Score").move(Vector2(0, 150))
+	get_node("Score").move(Vector2(0, global.usable_rec_pos.y))
 
 func load_questions():
 	var file = FileAccess.open("res://questions.json", FileAccess.READ)

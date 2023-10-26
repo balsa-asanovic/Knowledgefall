@@ -28,10 +28,15 @@ var load_response = config.load(save_file_path)
 var screen_size_x = 0
 var screen_size_y = 0
 
+var usable_rec_pos = Vector2(0, 0)
+var usable_rec_size = Vector2(0, 0)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	var screen_size = DisplayServer.screen_get_size()
+	
+	var screen_size_1 = get_viewport_rect().size
 	
 	if OS.get_name() == "Windows":
 		screen_size_x = screen_size.y
@@ -39,6 +44,16 @@ func _ready():
 	else:
 		screen_size_x = screen_size.x
 		screen_size_y = screen_size.y
+	
+	var usable_rec = DisplayServer.screen_get_usable_rect()
+	if OS.get_name() == "Windows":
+		usable_rec_pos = Vector2(usable_rec.position.y, usable_rec.position.x)
+		usable_rec_size = Vector2(usable_rec.size.y, usable_rec.size.x)
+	else:
+		usable_rec_pos = usable_rec.position
+		usable_rec_size = usable_rec.size
+
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
