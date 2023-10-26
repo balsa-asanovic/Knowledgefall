@@ -35,8 +35,7 @@ var usable_rec_size = Vector2(0, 0)
 func _ready():
 	
 	var screen_size = DisplayServer.screen_get_size()
-	
-	var screen_size_1 = get_viewport_rect().size
+	#var screen_size = get_viewport_rect().size
 	
 	if OS.get_name() == "Windows":
 		screen_size_x = screen_size.y
