@@ -33,7 +33,7 @@ var usable_rec_size = Vector2(0, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+
 	var screen_size = DisplayServer.screen_get_size()
 	#var screen_size = get_viewport_rect().size
 	
@@ -44,7 +44,7 @@ func _ready():
 		screen_size_x = screen_size.x
 		screen_size_y = screen_size.y
 	
-	var usable_rec = DisplayServer.screen_get_usable_rect()
+	var usable_rec = DisplayServer.get_display_safe_area()
 	if OS.get_name() == "Windows":
 		usable_rec_pos = Vector2(usable_rec.position.y, usable_rec.position.x)
 		usable_rec_size = Vector2(usable_rec.size.y, usable_rec.size.x)
