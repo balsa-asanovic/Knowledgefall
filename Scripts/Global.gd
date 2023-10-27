@@ -31,6 +31,9 @@ var screen_size_y = 0
 var usable_rec_pos = Vector2(0, 0)
 var usable_rec_size = Vector2(0, 0)
 
+var stretch_x = 1
+var stretch_y = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -43,6 +46,9 @@ func _ready():
 	else:
 		screen_size_x = screen_size.x
 		screen_size_y = screen_size.y
+	
+	stretch_x = screen_size_x / 1080.0
+	stretch_y = screen_size_y / 1920.0
 	
 	var usable_rec = DisplayServer.get_display_safe_area()
 	if OS.get_name() == "Windows":

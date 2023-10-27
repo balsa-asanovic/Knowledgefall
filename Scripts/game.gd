@@ -133,7 +133,7 @@ func _on_HardButton_pressed():
 		get_node("Buttons/Colors/DiffGreen").hide()
 		get_node("Buttons/Colors/DiffRed").hide()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 435, 0, 0, "Hard", 3, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 435, 0, 0, "Hard", 3, false)
 
 func _on_HarderButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -151,7 +151,7 @@ func _on_HarderButton_pressed():
 		get_node("Buttons/Colors/DiffGreen").hide()
 		get_node("Buttons/Colors/DiffRed").hide()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 645, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 645, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -169,7 +169,7 @@ func _on_HardestButton_pressed():
 		get_node("Buttons/Colors/DiffGreen").show()
 		get_node("Buttons/Colors/DiffRed").show()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - 855, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 855, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
