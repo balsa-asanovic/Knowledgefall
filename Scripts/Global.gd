@@ -34,6 +34,10 @@ var usable_rec_size = Vector2(0, 0)
 var stretch_x = 1
 var stretch_y = 1
 
+var current_background = 4
+
+var UI_pos_y = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -58,6 +62,8 @@ func _ready():
 		usable_rec_pos = usable_rec.position
 		usable_rec_size = usable_rec.size
 
+	if screen_size.y / 1920.0 > 1:
+		UI_pos_y = 1920.0 * (1 - (screen_size.y / 1920.0))
 
 
 

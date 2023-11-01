@@ -12,7 +12,7 @@ func _process(delta):
 	if global.score > global.get_high_score("HighScores", global.current_mode):
 		global.save_item("HighScores", global.current_mode, global.score)
 		
-		get_node("HighScore").text = "High Score: " + str(int(global.score))
+		get_node("HighScore/HighScore").text = str(int(global.score))
 		
 	if global.score >= 0 && global.current_screen != "High Score" && global.current_screen != "High Score Difficulty":
 		get_node("Score").text = str(int(global.score))

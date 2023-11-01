@@ -16,6 +16,8 @@ func _ready():
 	get_node("Buttons/Colors/DiffGreen").hide()
 	get_node("Buttons/Colors/DiffRed").hide()
 	
+	get_node("UI").position.y = global.UI_pos_y
+	
 	var osName = OS.get_name()
 	# var screen_size = DisplayServer.screen_get_size()
 	var screen_size = get_viewport_rect().size
@@ -25,7 +27,6 @@ func _ready():
 		get_node("Buttons").position.y = screen_size.y
 		get_node("Question/ColorRect").size.y = screen_size.y
 		if screen_size.y / 1920.0 >= 1.2:
-			get_node("UI/DifficultyButtons").position.y = 200
 			get_node("Question/Control/QuestionText").position.y += 100
 			get_node("Question/Control/Answers").position.y = 100
 
@@ -151,7 +152,7 @@ func _on_HarderButton_pressed():
 		get_node("Buttons/Colors/DiffGreen").hide()
 		get_node("Buttons/Colors/DiffRed").hide()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 645, 0, 0, "Harder", 6, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 640, 0, 0, "Harder", 6, false)
 
 func _on_HardestButton_pressed():
 	if global.current_screen == "High Score Difficulty":
@@ -169,17 +170,17 @@ func _on_HardestButton_pressed():
 		get_node("Buttons/Colors/DiffGreen").show()
 		get_node("Buttons/Colors/DiffRed").show()
 		get_node("Score/HighScore").visible = true
-		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 855, 0, 0, "Hardest", 9, false)
+		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 845, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
 	if global.current_screen == "Game Over":
 		global.current_screen = "Difficulty Selection"
 		get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 		get_node("Score/EndOptions").move(Vector2(1080, -40))
-		MoveStuff(0, 0, 0, 0, 0, -1000, 0, global.screen_size_y, 1080, 0, "Hard", 3, true)
+		MoveStuff(0, global.UI_pos_y, 0, 0, 0, -1000, 0, global.screen_size_y, 1080, 0, "Hard", 3, true)
 		global.score = 0
 	elif global.current_screen == "High Score":
-		get_node("UI").move(Vector2(0, 0))
+		get_node("UI").move(Vector2(0, global.UI_pos_y))
 		get_node("Score").move(Vector2(0, -1000))
 		global.current_screen = "High Score Difficulty"
 		
@@ -191,7 +192,7 @@ func MoveStuff(ui_x, ui_y, db_x, db_y, score_x, score_y, buttons_x, buttons_y, e
 	get_node("Buttons").move(Vector2(buttons_x, buttons_y))
 	get_node("Emitters").begin_game()
 	get_node("Emitters").move(Vector2(em_x, em_y))
-	get_node("Score/HighScore").text = "High Score: " + str(global.get_high_score("HighScores", mode))
+	get_node("Score/HighScore/HighScore").text = str(global.get_high_score("HighScores", mode))
 	
 	global.current_mode = mode
 	global.projectile_limit = limit
@@ -204,6 +205,12 @@ func _on_QuitButton_pressed():
 
 
 func _on_RestartButton_pressed():
+	#global.current_background += 1
+	#if (global.current_background > 7):
+	#	global.current_background = 1
+	#var texture = load("res://Art/bg" + str(global.current_background) + ".png") 
+	#get_node("ParallaxBackground/Sprite2D").set_texture(texture)
+	
 	get_node("Emitters").begin_game()
 	get_node("Score/EndOptions").move(Vector2(1080, -40))
 	
@@ -223,7 +230,7 @@ func show_high_score(difficulty):
 	var high_score = global.get_high_score("HighScores", difficulty)
 	get_node("Score/Score").text = str(high_score)
 	get_node("Score/HighScore").visible = false
-	get_node("UI").move(Vector2(0, 1920))
+	get_node("UI").move(Vector2(0, global.screen_size_y))
 	get_node("Score").move(Vector2(0, global.usable_rec_pos.y))
 
 func load_questions():
