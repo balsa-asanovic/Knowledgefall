@@ -64,7 +64,7 @@ func _ready():
 		usable_rec_size = usable_rec.size
 
 	if screen_size.y / 1920.0 > 1:
-		UI_pos_y = usable_rec_pos.y + (1920.0 * ((screen_size.y / 1920.0) - 1)) / (2 if OS_name == "iOS" else 3.5)
+		UI_pos_y = usable_rec_pos.y + (1920.0 * ((screen_size.y / 1920.0) - 1)) / (3 if OS_name == "iOS" else 3.5)
 
 
 
