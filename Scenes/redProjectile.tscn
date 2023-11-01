@@ -14,6 +14,7 @@ script = ExtResource("1_h1n7i")
 texture = ExtResource("2_4nn4p")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 83)
 script = ExtResource("3_pahpk")
 areaType = "Red"
 
