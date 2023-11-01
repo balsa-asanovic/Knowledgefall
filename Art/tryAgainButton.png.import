@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcprvlretvlul"
-path="res://.godot/imported/bg1.png-79f587b0c29b548598a4d705ecf34f5f.ctex"
+uid="uid://dx4c1ohkky8c2"
+path="res://.godot/imported/tryAgainButton.png-7514930b453b5a818989ba6130888871.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bg1.png"
-dest_files=["res://.godot/imported/bg1.png-79f587b0c29b548598a4d705ecf34f5f.ctex"]
+source_file="res://Art/tryAgainButton.png"
+dest_files=["res://.godot/imported/tryAgainButton.png-7514930b453b5a818989ba6130888871.ctex"]
 
 [params]
 

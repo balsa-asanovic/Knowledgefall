@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blwubxhmbdjv2"
-path="res://.godot/imported/bg.png-246b19c6fdef784996be17951b95462c.ctex"
+uid="uid://cxxpqsihjyuv"
+path="res://.godot/imported/redDots-removebg-preview.png-2cc952ef0422e037029d363ec0dbb919.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bg.png"
-dest_files=["res://.godot/imported/bg.png-246b19c6fdef784996be17951b95462c.ctex"]
+source_file="res://Art/redDots-removebg-preview.png"
+dest_files=["res://.godot/imported/redDots-removebg-preview.png-2cc952ef0422e037029d363ec0dbb919.ctex"]
 
 [params]
 
