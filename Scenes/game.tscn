@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://bsn5v0rbwra7g" path="res://Sprites/YellowButtonBig.png" id="18_10njv"]
 [ext_resource type="Texture2D" uid="uid://dr7sg37j8n8rl" path="res://Sprites/DiffGreenButtonBig.png" id="19_a6eja"]
 [ext_resource type="Script" path="res://Scripts/Arrow.gd" id="19_sehrc"]
-[ext_resource type="Texture2D" uid="uid://dhkmrrie4lcds" path="res://Art/backButton.png" id="20_36nsw"]
+[ext_resource type="Texture2D" uid="uid://bf45ph8sbhbxx" path="res://Art/backButton.png" id="20_36nsw"]
 [ext_resource type="Texture2D" uid="uid://couq588mucvnr" path="res://Art/highScoreBg.png" id="20_cnsq6"]
 [ext_resource type="Texture2D" uid="uid://bdsh8g308xosl" path="res://Sprites/DiffBlueButtonBig.png" id="20_whh46"]
 [ext_resource type="Script" path="res://Scripts/Emitters.gd" id="20_xdnvf"]

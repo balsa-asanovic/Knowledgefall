@@ -36,6 +36,7 @@ func _ready():
 		get_node("UI/MenuButtons/StartButton").position.y = 0.5 * screen_size.y
 
 func _process(delta):
+	
 	if global.questions.size() < 3:
 		load_questions()
 	if global.question_hit && !global.question_set:
@@ -173,7 +174,7 @@ func _on_HardestButton_pressed():
 		MoveStuff(0, -750, 1080, 0, 0, global.usable_rec_pos.y, 0, global.usable_rec_pos.y + global.usable_rec_size.y - global.stretch_y * 845, 0, 0, "Hardest", 9, false)
 	
 func _on_BackButtonDifficulty_pressed():
-	if global.current_screen == "Game Over":
+	if global.current_screen == "Game Over" || global.current_screen == "In Game":
 		global.current_screen = "Difficulty Selection"
 		get_node("UI/MenuButtons").move(Vector2(-1080, 0))
 		get_node("Score/EndOptions").move(Vector2(1080, -40))

@@ -55,7 +55,8 @@ func _ready():
 	stretch_y = screen_size_y / 1920.0
 	
 	var usable_rec = DisplayServer.get_display_safe_area()
-	if OS.get_name() == "Windows":
+	var OS_name = OS.get_name()
+	if OS_name == "Windows":
 		usable_rec_pos = Vector2(usable_rec.position.y, usable_rec.position.x)
 		usable_rec_size = Vector2(usable_rec.size.y, usable_rec.size.x)
 	else:
@@ -63,7 +64,7 @@ func _ready():
 		usable_rec_size = usable_rec.size
 
 	if screen_size.y / 1920.0 > 1:
-		UI_pos_y = (1920.0 * ((screen_size.y / 1920.0) - 1)) / 2
+		UI_pos_y = usable_rec_pos.y + (1920.0 * ((screen_size.y / 1920.0) - 1)) / (2 if OS_name == "iOS" else 3.5)
 
 
 
