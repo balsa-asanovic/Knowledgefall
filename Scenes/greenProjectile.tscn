@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_q13m2"]
 [ext_resource type="Texture2D" uid="uid://dhoc26qplg0am" path="res://Sprites/GreenProjectileBig.png" id="2_s4bex"]
 [ext_resource type="Script" path="res://Scripts/ProjectileArea.gd" id="3_wd8j0"]
-[ext_resource type="Texture2D" uid="uid://lshqsttfnbrm" path="res://Sprites/question_mark.png" id="4_6ib1y"]
+[ext_resource type="Texture2D" uid="uid://ckb3fom537p7x" path="res://Sprites/questionMark1.png" id="4_qwmm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qotdb"]
 
@@ -23,7 +23,8 @@ shape = SubResource("RectangleShape2D_qotdb")
 
 [node name="QuestionMark" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.102524, 0.0734694)
-texture = ExtResource("4_6ib1y")
+position = Vector2(0, -6.67572e-06)
+scale = Vector2(0.156052, 0.131217)
+texture = ExtResource("4_qwmm6")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
