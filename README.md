@@ -1,7 +1,5 @@
 # Knowledgefall Mobile Game
 
-![Game Screenshot](game_screenshot.png)
-
 ## Description
 
 Welcome to the **Knowledgefall** mobile game, an exciting and educational gaming experience developed in the Godot 4.1 engine. In this game, you'll need to test your reflexes and knowledge as you face falling tiles of various colors. Your goal is to match the color of the tile with the color you select at the bottom of the screen, and then tap the corresponding tile. But beware, as the tiles fall faster as the game progresses!
