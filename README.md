@@ -51,6 +51,16 @@ If you want to contribute to this project or report issues, please follow these 
 5. Push your changes to your fork on GitHub.
 6. Open a Pull Request on the original repository to propose your changes.
 
+## Screenshots
+
+| Initial screen | Difficulty selection | Main game screen |
+|      :---:     |          :---:       |        :---:     |
+| ![screenShot1](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/a81e6814-8aac-43f9-9875-79d8c6c46ac8) | ![screenShot2](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/87aa34d5-c218-40e1-9300-26135f6d2064) | ![screenShot3](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/b8c5d44d-55bc-4186-a61b-2ff3ab0e4e84)|
+| Game Over | Medium difficulty | Maximum difficulty |
+| ![screenShot4](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/57651184-774a-4f0a-b337-403f796fcaf2) | ![screenShot5](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/707afe16-7a66-4c83-bd63-8592a4e5d99e) | ![screenShot6](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/75316729-b1a2-4850-9255-1722a7f4495c) |
+| Question tile | Question | Question answered |
+| ![screenShot7](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/c4b83f5f-4fdc-452b-868a-61629ecbfb5f) | ![screenShot8](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/0ff1bdac-2ef3-4cd5-9787-e3d1ddbe0990) | ![screenShot9](https://github.com/balsa-asanovic/Knowledgefall/assets/112288843/331ce7d8-6e81-455f-91a6-6ff2e993df9a) |
+
 ## Credits
 
 This game is developed by Balsa Asanovic and is based on the Godot Engine. It also uses open-source libraries and assets. 
