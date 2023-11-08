@@ -63,4 +63,4 @@ This game is developed by Balsa Asanovic and is based on the Godot Engine. It al
 
 This project is licensed under the [MIT License](LICENSE).
 
-Enjoy playing **Color Matcher**! If you have any questions, suggestions, or feedback, feel free to reach out to us.
+Enjoy playing **Knowledgefall**! If you have any questions, suggestions, or feedback, feel free to reach out to us.
