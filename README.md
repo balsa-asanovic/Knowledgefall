@@ -11,7 +11,7 @@ Additionally, you'll encounter special tiles marked with a question mark. Destro
 - **Easy Mode**: Choose from 3 different colors.
 - **Medium Mode**: Test your skills with 6 colors.
 - **Hard Mode**: Take on the ultimate challenge with 9 colors.
-- **Special Mode**: Play with 3 colors and match shapes as well!
+- **Special Mode**: Play with 3 colors and match shapes as well! (not implemented)
 
 Are you up for the challenge? Let's see how well you can match colors and answer questions as the tiles rain down!
 
